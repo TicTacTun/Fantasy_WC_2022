@@ -46,7 +46,7 @@
                         <thead class = 'class="p-3 mb-2 bg-dark text-white'>
                             <tr>
                                 
-                                <th >CountryL</th>
+                                <th >Country</th>
                                 <th >PLayer ID</th><br>
                                 <th>Position</th>
                                 <th >Name</th>
