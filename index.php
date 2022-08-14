@@ -12,9 +12,9 @@ if (isset($_SESSION['username'])) {
 
 if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
-	$password = md5($_POST['password']);
+	$password = $_POST['password'];
 
-	$sql = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+	$sql = "SELECT * FROM users WHERE email='$email' AND pass='$password'";
 	$result = mysqli_query($conn, $sql);
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
 	} else {
 		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
 	}
-} tutan
+}
 
 ?>
 
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
 
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<title>Login Form - Pure Coding</title>
+	<title>Login Form - Fantasy WC 2022</title>
 </head>
 <body>
 	<div class="container">
