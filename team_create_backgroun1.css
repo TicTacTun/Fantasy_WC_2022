@@ -1,0 +1,74 @@
+body,html{
+  height: 150%;
+  margin: 0;
+}
+.bg {
+    /* The image used */
+    background-image: url("https://wallpaperaccess.com/full/1337873.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+  }
+  
+  header{
+    height: 150px;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    color: aliceblue;
+    font-family: "Audiowide", sans-serif;
+    
+    
+  }
+  h2{
+    background-color: rgb(185, 185, 185);
+  }
+  .column1{
+    width: 30%;
+    float: right;
+    margin-right: 2%;
+    background-color: aliceblue;
+    
+
+  }
+  .column2{
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    
+    background-color: aliceblue;
+  }
+  .column3{
+    width: 30%;
+    margin: 0 auto;
+    float: center;
+    
+    background-color: aliceblue;
+  }
+  .column4{
+    width:40%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: center;
+    background-color: aliceblue;
+    
+
+  }
+  table tbody {
+    display: block;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
