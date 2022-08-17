@@ -9,11 +9,5 @@ $dbname = "fantasy_wc_2022";
 
 $conn = new mysqli($servername, $uname, $pass, $dbname);
 
-//check connection
-
-if (!$conn) {
-    die("<script>alert('Connection Failed.')</script>");
-}
-
 
 ?>

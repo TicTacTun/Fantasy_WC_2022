@@ -58,10 +58,10 @@ if (isset($_POST['submit'])) {
 
 	<title>Register Form - Fantasy WC 2022</title>
 </head>
-<body>
-	<div class="container">
+<body style="justify-content: right; background-size: contain; background-position: left; background-repeat: no-repeat; background-color: #260303;">
+	<div class="container" style="background: rgb(255, 255, 255); margin-right: 240px;">
 		<form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800;">Register</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800; color: #580909;">Register</p>
 			<div class="input-group">
 				<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
 			</div>
@@ -69,7 +69,12 @@ if (isset($_POST['submit'])) {
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
 			<div class="input-group">
-				<input type="text" placeholder="Gender" name="gender" value="<?php echo $gender; ?>" required>
+			<select name="gender" id="gender" style="font-size: 15px; width: 100%; height: 100%;border: 2px solid #e7e7e7;padding: 10px 20px; border-radius: 30px;background: transparent;outline: none;transition: .3s;">
+			      <option value="" disabled selected hidden>Choose Your Gender</option>
+						<option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+        </select>
 			</div>
 			<div class="input-group">
 				<input type="text" placeholder="Country" name="country" value="<?php echo $country; ?>" required>
@@ -84,9 +89,9 @@ if (isset($_POST['submit'])) {
 				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn">Register</button>
+				<button name="submit" class="btn" style="background: #580909">Register</button>
 			</div>
-			<p class="login-register-text">Have an account? <a href="index.php">Login Here</a>.</p>
+			<p class="login-register-text">Already Have an account? <a href="index.php" style="color: #580909">Login Here</a>.</p>
 		</form>
 	</div>
 </body>
