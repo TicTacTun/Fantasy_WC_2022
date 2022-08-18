@@ -1,0 +1,114 @@
+body,html{
+  height: 200%;
+  margin: 0;
+}
+.bg {
+    /* The image used */
+    background-image: url("pexels-tembela-bohle-1884574.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* https://wallpaperaccess.com/full/1337873.jpgCenter and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed
+
+    
+   
+  }
+  
+  header{
+    height: 150px;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    color: rgb(172, 53, 53);
+    font-family: "Times New Roman", Times, serif;
+    
+    
+    
+    
+    
+  }
+  h2{
+    background-color: rgb(185, 185, 185);
+  }
+  .column1{
+    width: 30%;
+    float: right;
+    margin-right: 2%;
+    background-color: aliceblue;
+    
+
+  }
+  .column2{
+    width: 30%;
+    float: left;
+    margin-left: 2%;
+    
+    background-color: aliceblue;
+  }
+  .column3{
+    width: 30%;
+    margin: 0 auto;
+    float: center;
+    
+    background-color: aliceblue;
+  }
+  .column4{
+    width:40%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: center;
+    background-color: aliceblue;
+    
+
+  }
+  table tbody {
+    display: block;
+    height: 300px;
+    overflow-y: scroll;
+  }
+  
+  table thead, table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+  input[type=text] {
+    width: 30%;
+    padding: 18px 20px;
+    margin: 8px 0;
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 35%;
+    float: center;
+    background-color: aliceblue;
+    
+    
+  }
+  input[type=submit] {
+    width: 5%;
+    background-color: #63b366;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 0.5%;
+    margin-left: 45%;
+    margin-bottom: 3%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #78a57a;
+  }
+  
+  
