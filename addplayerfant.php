@@ -1,7 +1,7 @@
 <?php
 require_once('datbasecon.php');
 if (!empty($_POST['name']) && $_POST["submit"]){
-    $team_name = $_POST['tname'];
+    $team_name = $_POST['name'];
     echo $team_name;
     $sql = "CREATE TABLE $team_name (Points INT(6) ,Ranking int(10) , Name VARCHAR(30) UNIQUE KEY, Position VARCHAR(50))";
     
@@ -14,7 +14,7 @@ if (!empty($_POST['name']) && $_POST["submit"]){
 
 
 
-if (isset($_GET['addid']) && $_POST['tname'] ){
+if (isset($_GET['addid']) && $_POST['name'] ){
     $id = $_GET['addid'];
     $team_name=$_POST['tname'];
      

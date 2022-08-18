@@ -51,7 +51,7 @@
             
             <form action="addplayerfant.php" method="post">
                 
-                <input   type="text"  name="tname" placeholder="Your team name..">
+                <input   type="text"  name="name" placeholder="Your team name..">
                             
                 <br>
                 <input type="submit"  name= "submit" value="SUBMIT">
