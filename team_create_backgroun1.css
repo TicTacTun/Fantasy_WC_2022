@@ -110,5 +110,8 @@ body,html{
   input[type=submit]:hover {
     background-color: #78a57a;
   }
+.button0{
+  width: 15%;
+}
   
   

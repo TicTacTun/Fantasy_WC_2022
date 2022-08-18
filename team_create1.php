@@ -1,11 +1,15 @@
 <?php require_once ("datbasecon.php");?>
 <?php
+    session_start();
+
                        
     function writeMsgt($conn,$sql) {
         
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
             $id = $row['Player_ID'];
+            
+            
             
             echo '<tr>
                     
@@ -14,20 +18,23 @@
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Name'].'</td>                               
                 
-                    <td>         
+                    <td> 
+                        
                         <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "addplayerfant.php?addid='.$id.'" class="text-light" > 
+                            <a href = "addplayerfant.php?addid='.$id.'" class="text-light" >     
                                 Add Player
+
                             </a>
                         </button>
-                    
+
                     </td>
                 </tr>';
         }
     }
                            
-                        
+                      
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,9 +56,9 @@
         <div class = "team_name">
             
             
-            <form action="addplayerfant.php" method="post">
+            <form action="name_fant.php" method="post">
                 
-                <input   type="text"  name="name" placeholder="Your team name..">
+                <input   type="text"  name="name"  placeholder="Your team name..">
                             
                 <br>
                 <input type="submit"  name= "submit" value="SUBMIT">
@@ -162,7 +169,13 @@
 
 
 <?php  
-    /*  function writeMsgt2($conn,$sql) {
+    /*  
+    
+    <a href = "addplayerfant.php" class="text-light" > 
+    
+    
+    
+    function writeMsgt2($conn,$sql) {
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
             $id = $row['Name'];
