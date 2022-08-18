@@ -6,7 +6,7 @@ if (!isset($_SESSION['username'])) {
     header("Location: index.php");
 }
 
-?> tutan
+?>
 
 <!DOCTYPE html>
 <html lang="en">
