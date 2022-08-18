@@ -3,13 +3,13 @@ body,html{
   margin: 0;
 }
 .bg {
-    /* The image used */
+    
     background-image: url("pexels-tembela-bohle-1884574.jpg");
   
-    /* Full height */
+    
     height: 100%; 
   
-    /* https://wallpaperaccess.com/full/1337873.jpgCenter and scale the image nicely */
+    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
