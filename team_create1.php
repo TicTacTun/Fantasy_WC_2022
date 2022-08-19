@@ -61,7 +61,7 @@
                 <input   type="text"  name="name"  placeholder="Your team name..">
                             
                 <br>
-                <input type="submit"  name= "submit" value="SUBMIT">
+                <input type="submit"  onclick="style.display = 'disable'" name= "submit" value="SUBMIT">
             </form>
         </div>
         
