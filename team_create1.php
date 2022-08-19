@@ -7,7 +7,7 @@
         
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID'];
+            $id = $row['Name'];
             
             
             
@@ -21,8 +21,8 @@
                     <td> 
                         
                         <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "addplayerfant.php?addid='.$id.'" class="text-light" >     
-                                Add Player
+                            <a href = "team_create1.php?addid='.$id.'" class="text-light" >     
+                                remove
 
                             </a>
                         </button>
@@ -51,109 +51,57 @@
     
     <div class='bg'>
         <div>
-            <header>Team Creation</header> 
+            <header>Here is Your Fantasy Team</header> 
         </div> 
-        <div class = "team_name">
-            
-            
-            <form action="name_fant.php" method="post">
-                
-                <input   type="text"  name="name"  placeholder="Your team name..">
-                            
-                <br>
-                <input type="submit"  onclick="style.display = 'disable'" name= "submit" value="SUBMIT">
-            </form>
-        </div>
         
-        
-        <div class="column1" >
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Forward</h2>
-            <table class = 'table table-striped'>
-                <thead class = 'p-3 mb-2 bg-dark text-white'>
-                    <tr>
-                        <th >Country</th>
-                        <th >PLayer ID</th>
-                        <th>Position</th>
-                        <th >Name</th>                                                     
-                        <th>Select</th>
-                    </tr>
-                </thead>
-                <?php                            
-                    $sql = "Select * FROM players where Position='Forward'";
-                    writeMsgt($conn,$sql);  
-                ?>
-                <!---- ---------------------------------------------------  -->
-            </table>
-        </div>
-        
-        <div class="column2">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>MidFielder</h2>
-            <table class = 'table table-striped'>
-                <thead class='p-3 mb-2 bg-dark text-white'>
-                    <tr>
-                        <th >Country</th>
-                        <th >PLayer ID</th>
-                        <th>Position</th>
-                        <th >Name</th>                                                     
-                        <th>Select</th>
-                    </tr>
-                </thead>
-                <tbody >          
-                    <?php
-
-                        $sql = "Select * FROM players where Position='MidFielder'";
-                        WriteMsgt($conn,$sql);                                         
-                    ?>                       
-                </tbody>
-                <!---- ---------------------------------------------------  -->
-            </table>
-        </div>
-
-        <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Defender</h2>
+        <div class="column5">
+            <h2 style='font-family: "Times New Roman", Times, serif;'>Fantasy Team</h2>
             <table class = 'table table-striped'>
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>
-                        <th >PLayer ID</th>
-                        <th>Position</th>
-                        <th >Name</th>                                                     
-                        <th>Select</th>
-                    </tr>
-                </thead>
-                <tbody>
-
-                    <?php           
-                        $sql = "Select * FROM players where Position='Defender'";
-                        writeMsgt($conn,$sql);
-                    ?>
-                    
-                </tbody>
-                <!---- ---------------------------------------------------  -->
-            </table>
-        </div>
-
-        <div class="column4">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Goalkeeper</h2>
-            <table class = 'table table-striped'>
-                <thead class= 'class="p-3 mb-2 bg-dark text-white'>
-                    <tr>
-                        <th >Country</th>
-                        <th >PLayer ID</th>
+                        <th >Points</th>
+                        <th>Ranking</th>
                         <th>Position</th>
                         <th >Name</th>                                                     
                         <th>Select</th>
                     </tr>
                 </thead>
                 <?php
-        
-                    $sql = "Select * FROM players where Position='GoalKeeper'";
-                    writeMsgt($conn,$sql);
+                    
+                    $name11 = $_SESSION['name'];
+                    $sql11 = "SELECT * FROM $name11 ";
+                    $query = mysqli_query($conn,$sql11);
+                    $row = mysqli_num_rows($query);
+                    
+                    $result = $conn->query($sql11);
+                    while ($row = $result->fetch_assoc()){
+                        $id = $row['Player_ID'];
+                        
+                        echo '<tr>
+                                
+                                <td>'.$row['Country'].'</td>
+                                
+                                <td>'.$row['Player_ID'].'</td>
+                                <td>'.$row['Name'].'</td>
+                                <td>'.$row['Position'].'</td>                               
+                            
+                                <td>         
+                                    <button class="btn btn-success btn-sm" name = "button1">
+                                        <a href = "deleteplayerfant.php?deleteid='.$id.'" class="text-light" > 
+                                            Remove
+                                        </a>
+                                    </button>
+                                
+                                </td>
+                            </tr>';
+                    }
+                    
 
                 ?>
                 
             </table>
-        </div> 
+        </div>  
     
     </div> 
   

@@ -14,11 +14,12 @@ if (isset($_GET['addid'])){
     $resultM = mysqli_query($conn,$sqlM);
     $resultG = mysqli_query($conn,$sqlG);
     $resultD = mysqli_query($conn,$sqlD);
-
-    if (mysqli_num_rows($resultF)<=3 && mysqli_num_rows($resultM)<=4 && mysqli_num_rows($resultG)<=1 && mysqli_num_rows($resultD)<=4   ) {
-        $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position FROM players where Player_ID =$id; ";
+    
+    function insert($conn,$sql){
+        
         $result = mysqli_query($conn,$sql);
         if ($result ){
+            
             header('location:team_create1.php');
         }
         else{
@@ -26,34 +27,29 @@ if (isset($_GET['addid'])){
         }
     }
     
-
+    if ((mysqli_num_rows($resultF)<4) && (mysqli_num_rows($resultG)<2) ){
+        $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position FROM players where Player_ID =$id;";
+        insert($conn,$sql);
+        echo mysqli_num_rows($resultF);
+    
+    }
 }
+    /*if(mysqli_num_rows($resultM)<=4){
+        $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position FROM players where Player_ID =$id; ";
+        insert($conn,$sql);
+    }
+    
+    if (mysqli_num_rows($resultG)<=1){
+        $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position FROM players where Player_ID =$id; ";
+        insert($conn,$sql);
+
+    } 
+    if (mysqli_num_rows($resultD)<=4 ) {
+        $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position  FROM players where Player_ID =$id; ";
+        insert($conn,$sql);
+    }
+    
+}*/
 
 ?>
-<?php
-/* 
-session_start();
-require_once('datbasecon.php');
-
-
-if (isset($_GET['addid'])){
-    $id = $_GET['addid'];
-    $name = $_SESSION['name'];
-    $sql1 = "Select * FROM $name where Position='Forward'";
-    if (mysqli_num_rows($result)<2) {
-        echo mysqli_num_rows($result);
-    } 
-    $sql = "INSERT INTO  $name (Name, Position) SELECT Name, Position FROM players where Player_ID =$id; ";
-    $result = mysqli_query($conn,$sql1);
-    if ($result ){
-        header('location:team_create1.php');
-    }
-    else{
-        mysqli_error($conn);
-    }
-}
-
-
-
-*/?>
 

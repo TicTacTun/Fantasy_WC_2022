@@ -1,5 +1,5 @@
 body,html{
-  height: 200%;
+  height: 100%;
   margin: 0;
 }
 .bg {
@@ -33,12 +33,18 @@ body,html{
     
   }
   h2{
-    background-color: rgb(185, 185, 185);
+    background-color: darkgrey;
+    height: 50px;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
   }
   .column1{
-    width: 30%;
-    float: right;
-    margin-right: 2%;
+    width:40%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: center;
     background-color: aliceblue;
     
 
@@ -64,6 +70,17 @@ body,html{
     margin-bottom: 5%;
     float: center;
     background-color: aliceblue;
+    
+
+  }
+  .column5{
+    width:70%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    float: center;
+    background-color: aliceblue;
+    
     
 
   }
