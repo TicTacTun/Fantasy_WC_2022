@@ -1,6 +1,7 @@
 <?php require_once ("datbasecon.php");?>
 <?php
-    session_start();                                          
+    session_start();
+                                          
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +23,10 @@
             <header>Here is Your Fantasy Team</header> 
         </div> 
         
-        <div class="column5">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Fantasy Team</h2>
-            <table class = 'table table-striped'>
-                <thead class= 'class="p-3 mb-2 bg-dark text-white'>
+        <div class="column5" >
+            <h2 style='font-family: "Times New Roman", Times, serif;'>Team <?php echo $_SESSION['name']?> </h2>
+            <table id = 'team 'class = 'table table-striped'>
+                <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>
                         <th >Points</th>
@@ -77,47 +78,3 @@
   
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-<?php  
-    /*  
-    
-    <a href = "addplayerfant.php" class="text-light" > 
-    
-    
-    
-    function writeMsgt2($conn,$sql) {
-        $result = $conn->query($sql);
-        while ($row = $result->fetch_assoc()){
-            $id = $row['Name'];
-            
-            echo '<tr>
-                    
-                    <td>'.$row['Points'].'</td>
-                    <td>' .$row['Ranking'].'</td>
-                    <td>'.$row['Name'].'</td>
-                    <td>'.$row['Position'].'</td>                               
-                
-                    <td>         
-                        <button class="btn btn-success btn-sm" name = "button1">
-                            <a href = "deleteplayerfant.php?deleteid='.$id.'" class="text-light" > 
-                                Remove
-                            </a>
-                        </button>
-                    
-                    </td>
-                </tr>';
-        }
-    }
-    $table_name='abraca';
-
-    $sql = "Select * FROM abraca where Position='Forward'";
-    writeMsgt2($conn,$sql);  */
-?>

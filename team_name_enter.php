@@ -1,7 +1,7 @@
 <?php require_once ("datbasecon.php");?>
 <?php
     session_start();
-
+    
                        
     function writeMsgt($conn,$sql) {
         
@@ -40,6 +40,7 @@
                       
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,22 +56,20 @@
 <body>
     
     <div class='bg'>
-        <div>
-            <header >Team Creation</header> 
-        </div> 
-        <div class = "team_name">
-            
-            
-            <form action="name_fant.php" method="post">
+        <div class='signupFrm'>
+            <div class = "team_name">
                 
-                <input   type="text"  name="name"  placeholder="Your team name..">
-                            
-                <br>
-                <input type="submit"  onclick="style.display = 'disable'" name= "submit" value="SUBMIT">
-            </form>
-        </div>
-        
-        
+                >
+                <form class='form' action="name_fant.php" method="post">
+                    <h2>Enter Your Team Name</h2>
+                    <input   type="text"  name="name"  placeholder="Your team name..">
+                                
+                    <br>
+                    <input type="submit"  onclick="style.display = 'disable'" name= "submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>   
+            
         
     </div> 
   

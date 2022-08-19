@@ -43,6 +43,7 @@
             $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
+                echo "<script>alert('Player has been ADDED');</script>";
                 
                 header('location:forward.php');
             }
@@ -52,6 +53,7 @@
         
         }
         else{
+            echo "<script>alert('You are moved to next position');</script>";
             header('location: mid_fielder.php');
         }
         
@@ -76,31 +78,33 @@
     <div class='bg'>
         <div>
             <header>Team Creation</header>
-            <header>Choose Your Forward Players</header>
+            
         </div> 
        
         
         <div class="column1" >
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Forward</h2>
-            <table class = 'table table-striped'>
-                <thead class = 'p-3 mb-2 bg-dark text-white'>
-                    <tr>
-                        <th >Country</th>
-                        <th >PLayer ID</th>
-                        <th>Position</th>
-                        <th >Name</th>                                                     
-                        <th>Select</th>
-                    </tr>
-                </thead>
-                <?php                            
-                    $sql = "Select * FROM players where Position='Forward' ";
-                    writeMsgt($conn,$sql);  
-                ?>
-                <!---- ---------------------------------------------------  -->
-            </table>
+            
+                <h2 style='font-family: "Times New Roman", Times, serif;'>Choose Your Forward Players</h2>
+                
+                <table class = 'content-table'>
+                    <thead class = 'p-3 mb-2 bg-dark text-white'>
+                        <tr>
+                            <th >Country</th>
+                            <th >PLayer ID</th>
+                            <th>Position</th>
+                            <th >Name</th>                                                     
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <?php                            
+                        $sql = "Select * FROM players where Position='Forward' ";
+                        writeMsgt($conn,$sql);  
+                    ?>
+                    <!---- ---------------------------------------------------  -->
+                </table>
+                
+        
         </div>
-        
-        
             
         
     <div>  

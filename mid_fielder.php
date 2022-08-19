@@ -75,7 +75,7 @@
     <div class='bg'>
         <div>
             <header>Team Creation</header>
-            <header>Choose Your Midfielder Players</header> 
+            
         </div> 
         
         
@@ -84,7 +84,7 @@
         
         <div class="column2">
             <h2 style='font-family: "Times New Roman", Times, serif;'>MidFielder</h2>
-            <table class = 'table table-striped'>
+            <table class = 'content-table'>
                 <thead class='p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>

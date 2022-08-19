@@ -77,12 +77,12 @@
     <div class='bg'>
         <div>
             <header>Team Creation</header>
-            <header>Choose Your Goaleeper Player</header> 
+            <
         </div> 
         
         <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Defender</h2>
-            <table class = 'table table-striped'>
+            <h2 style='font-family: "Times New Roman", Times, serif;'>Goalkeeper</h2>
+            <table class = 'content-table'>
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>

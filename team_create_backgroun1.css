@@ -1,5 +1,5 @@
 body,html{
-  height: 100%;
+  height: 110%;
   margin: 0;
 }
 .bg {
@@ -33,48 +33,32 @@ body,html{
     
   }
   h2{
-    background-color: darkgrey;
+    background-color: rgb(255, 255, 255);
     height: 50px;
     width: 100%;
     font-size: 80px;
     text-align: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    
   }
-  .column1{
-    width:40%;
+  .column1,.column2,.column3,.column4{
+    width:50%;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     float: center;
     background-color: aliceblue;
+    font-size: 120%;
+    
+    
     
 
   }
-  .column2{
-    width: 30%;
-    float: left;
-    margin-left: 2%;
-    
-    background-color: aliceblue;
-  }
-  .column3{
-    width: 30%;
-    margin: 0 auto;
-    float: center;
-    
-    background-color: aliceblue;
-  }
-  .column4{
-    width:40%;
-    margin: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    float: center;
-    background-color: aliceblue;
-    
 
-  }
+
   .column5{
-    width:70%;
+    width:60%;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -86,9 +70,10 @@ body,html{
   }
   table tbody {
     display: block;
-    height: 300px;
+    height: 580px;
     overflow-y: scroll;
   }
+  
   
   table thead, table tbody tr {
     display: table;
@@ -96,8 +81,8 @@ body,html{
     table-layout: fixed;
   }
   input[type=text] {
-    width: 30%;
-    padding: 18px 20px;
+    width: 100%;
+    padding: 15px 20px;
     margin: 8px 0;
     
     border: 1px solid #ccc;
@@ -105,19 +90,19 @@ body,html{
     box-sizing: border-box; 
     margin-top: 5%;
     margin-bottom: 1%;
-    margin-left: 35%;
+    margin-left: 0%;
     float: center;
     background-color: aliceblue;
     
     
   }
   input[type=submit] {
-    width: 5%;
+    width: 25%;
     background-color: #63b366;
     color: white;
     padding: 14px 20px;
-    margin-top: 0.5%;
-    margin-left: 45%;
+    margin-top: 5%;
+    margin-left: 35%;
     margin-bottom: 3%;
     border: none;
     border-radius: 4px;
@@ -130,5 +115,65 @@ body,html{
 .button0{
   width: 15%;
 }
+form {
+  background-color: white;
+  width: 200%;
+  border-radius: 8px;
+  padding: 10px 40px;
+  box-shadow: 0 50px 25px rgba(92, 99, 105, .2);
+  margin-left: -38%;
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: -0.5%;
+}
+
+.content-table thead tr {
+  background-color: #9e250f;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
   
   
