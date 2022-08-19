@@ -81,7 +81,17 @@
         
         
         <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Defender</h2>
+            <h2 style='font-family: "Times New Roman", Times, serif;'>Defender(
+                
+                <?php 
+                    $nam1 = $_SESSION['name'];
+                    $sqlF = "Select * FROM $nam1 where Position='Defender'"; 
+                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                ?>
+            out of 4 )</h2>
+            
+        
+            </h2>
             <table class = 'content-table'>
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>

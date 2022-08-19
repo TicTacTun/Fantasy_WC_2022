@@ -83,7 +83,16 @@
         
         
         <div class="column2">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>MidFielder</h2>
+            <h2 style='font-family: "Times New Roman", Times, serif;'>MidFielder (
+            
+                <?php 
+                    $nam1 = $_SESSION['name'];
+                    $sqlF = "Select * FROM $nam1 where Position='MidFielder'"; 
+                    $resultF = mysqli_query($conn,$sqlF); 
+                    echo mysqli_num_rows($resultF)
+                ?>
+                out of 4 )</h2>
+            </h2>
             <table class = 'content-table'>
                 <thead class='p-3 mb-2 bg-dark text-white'>
                     <tr>

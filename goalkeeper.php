@@ -18,15 +18,16 @@
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Name'].'</td>                               
                 
-                    <td> 
+                    <td>
                         
-                        <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "goalkeeper.php?addid='.$id.'" class="text-light" >     
+                            
+                        <button  class="btn btn-success btn-sm" name = "button0">
+                            <a href = "goalkeeper.php?addid='.$id.'" class="text-light" > 
                                 Add Player
-
                             </a>
+                            
                         </button>
-
+                        </form>
                     </td>
                 </tr>';
         }
@@ -81,7 +82,14 @@
         </div> 
         
         <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Goalkeeper</h2>
+            <h2 style='font-family: "Times New Roman", Times, serif;'>Goalkeeper(
+                
+                <?php 
+                    $nam1 = $_SESSION['name'];
+                    $sqlF = "Select * FROM $nam1 where Position='GoalKeeper'"; 
+                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                ?>
+                out of 1 )</h2></h2>
             <table class = 'content-table'>
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
