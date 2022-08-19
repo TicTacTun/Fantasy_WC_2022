@@ -1,41 +1,6 @@
 <?php require_once ("datbasecon.php");?>
 <?php
-    session_start();
-    
-                       
-    function writeMsgt($conn,$sql) {
-        
-        $result = $conn->query($sql);
-        while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID'];
-            $value = 0;
-            
-            
-            
-            echo '<tr>
-                    
-                    <td>'.$row['Country'].'</td>
-                    <td>'.$row['Player_ID'].'</td>
-                    <td>'.$row['Name'].'</td>  
-                    <td>'.$value.'</td>
-                    <td>'.$value.'</td>
-                    
-                    <td>'.$row['Position'].'</td>
-                                                 
-                
-                    <td> 
-                        
-                        <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "addplayerfant.php?addid='.$id.'" class="text-light" >     
-                                Add Player
-
-                            </a>
-                        </button>
-
-                    </td>
-                </tr>';
-        }
-    }
+    session_start()
                            
                       
 ?>
@@ -65,7 +30,7 @@
                     <input   type="text"  name="name"  placeholder="Your team name..">
                                 
                     <br>
-                    <input type="submit"  onclick="style.display = 'disable'" name= "submit" value="SUBMIT">
+                    <input type="submit"   name= "submit" value="SUBMIT">
                 </form>
             </div>
         </div>   
