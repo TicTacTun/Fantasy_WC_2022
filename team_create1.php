@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="team_create_backgroun1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    
     <title> Fantasy Team Selection</title>
 </head>
 
@@ -58,7 +59,7 @@
                                 <td>'.$row['Position'].'</td>                               
                             
                                 <td>         
-                                    <button class="btn btn-success btn-sm" name = "button1">
+                                    <button class="btn btn-success btn-sm" name = "button1" onclick=function () ">
                                         <a href = "deleteplayerfant.php?deleteid='.$id.'" class="text-light" > 
                                             Remove
                                         </a>
@@ -75,6 +76,6 @@
         </div>  
     
     </div> 
-  
+
 </body>
 </html>

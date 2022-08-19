@@ -76,8 +76,9 @@
     <div class='bg'>
         <div>
             <header>Team Creation</header>
-            <header>Choose Your Defender Players</header> 
-        </div> 
+            
+        </div>
+        
         
         <div class="column3">
             <h2 style='font-family: "Times New Roman", Times, serif;'>Defender</h2>

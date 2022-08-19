@@ -1,7 +1,7 @@
 <?php require_once ("datbasecon.php");?>
 <?php
     session_start();
-
+    
                        
     function writeMsgt($conn,$sql) {
         
@@ -20,7 +20,7 @@
                 
                     <td> 
                         
-                        <button class="btn btn-success btn-sm" name = "button0">
+                        <button class="btn btn-success btn-sm" name = "button0" onclick="myFunction()">
                             <a href = "forward.php?addid='.$id.'" class="text-light" >     
                                 Add Player
 
@@ -43,7 +43,7 @@
             $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
-                echo "<script>alert('Player has been ADDED');</script>";
+                
                 
                 header('location:forward.php');
             }
@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="team_create_backgroun1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src ='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js'></script>
     <title> Forward</title>
 </head>
 
@@ -84,7 +85,7 @@
         
         <div class="column1" >
             
-                <h2 style='font-family: "Times New Roman", Times, serif;'>Choose Your Forward Players</h2>
+                <h2 style='font-family: "Times New Roman", Times, serif;'>Forward Players </h2>
                 
                 <table class = 'content-table'>
                     <thead class = 'p-3 mb-2 bg-dark text-white'>
