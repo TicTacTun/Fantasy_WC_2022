@@ -1,38 +1,6 @@
 <?php require_once ("datbasecon.php");?>
 <?php
-    session_start();
-
-                       
-    function writeMsgt($conn,$sql) {
-        
-        $result = $conn->query($sql);
-        while ($row = $result->fetch_assoc()){
-            $id = $row['Name'];
-            
-            
-            
-            echo '<tr>
-                    
-                    <td>'.$row['Country'].'</td>
-                    <td>'.$row['Player_ID'].'</td>
-                    <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                               
-                
-                    <td> 
-                        
-                        <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "team_create1.php?addid='.$id.'" class="text-light" >     
-                                remove
-
-                            </a>
-                        </button>
-
-                    </td>
-                </tr>';
-        }
-    }
-                           
-                      
+    session_start();                                          
 ?>
 
 <!DOCTYPE html>
@@ -62,8 +30,10 @@
                         <th >Country</th>
                         <th >Points</th>
                         <th>Ranking</th>
+                        <th>Player_ID</th>
+                        <th >Name</th>  
                         <th>Position</th>
-                        <th >Name</th>                                                     
+                                                                             
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -71,17 +41,17 @@
                     
                     $name11 = $_SESSION['name'];
                     $sql11 = "SELECT * FROM $name11 ";
-                    $query = mysqli_query($conn,$sql11);
-                    $row = mysqli_num_rows($query);
                     
                     $result = $conn->query($sql11);
                     while ($row = $result->fetch_assoc()){
                         $id = $row['Player_ID'];
+                        $value = 0;
                         
                         echo '<tr>
                                 
                                 <td>'.$row['Country'].'</td>
-                                
+                                <td>'.$value.'</td>
+                                <td>'.$value.'</td>
                                 <td>'.$row['Player_ID'].'</td>
                                 <td>'.$row['Name'].'</td>
                                 <td>'.$row['Position'].'</td>                               

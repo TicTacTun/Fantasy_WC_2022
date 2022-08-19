@@ -8,6 +8,7 @@
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
             $id = $row['Player_ID'];
+            $value = 0;
             
             
             
@@ -15,8 +16,12 @@
                     
                     <td>'.$row['Country'].'</td>
                     <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Name'].'</td>  
+                    <td>'.$value.'</td>
+                    <td>'.$value.'</td>
+                    
                     <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                               
+                                                 
                 
                     <td> 
                         
