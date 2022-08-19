@@ -7,7 +7,7 @@ if (isset($_GET['deleteid'])){
     
     $name1 = $_SESSION['name'];
     
-    $sql = "DELETE FROM ektu  WHERE Name='$name'; ";
+    $sql = "DELETE FROM $name1 WHERE Name='$name'; ";
     $result = mysqli_query($conn,$sql);
     if ($result){
         header('location:team_create1.php');
