@@ -32,13 +32,13 @@
             <table id = 'team 'class = 'table table-striped'>
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Country</th>
-                        <th >Points</th>
-                        <th>Ranking</th>
-                        <th>Player_ID</th>
-                        <th >Name</th>  
+                        <th >Player_ID</th>
+                        <th>Name</th>
                         <th>Position</th>
-                                                                             
+                        <th>Country</th>
+                        <th>Points</th>
+                        <th>Ranking</th>
+                                                                               
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -54,13 +54,13 @@
                         $value = 0;
                         
                         echo '<tr>
-                                
+                                <td>'.$row['Player_ID'].'</td>
+                                <td>'.$row['Name'].'</td>
+                                <td>'.$row['Position'].'</td>
                                 <td>'.$row['Country'].'</td>
                                 <td>'.$value.'</td>
                                 <td>'.$value.'</td>
-                                <td>'.$row['Player_ID'].'</td>
-                                <td>'.$row['Name'].'</td>
-                                <td>'.$row['Position'].'</td>                               
+                                                              
                             
                                 <td>         
                                     <button class="btn btn-success btn-sm" name = "button1" onclick=function () ">

@@ -1,20 +1,30 @@
 <?php require_once ("datbasecon.php");?>
-
+<script>
+function myFunction() {
+  alert("I am an alert box!");
+}
+</script>
 <?php
+
     session_start();                       
     function writeMsgt($conn,$sql) {       
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID'];   
+            $id = $row['Player_ID']; 
+            $value =0 ; 
+            $hello ='hello';
             echo '<tr>                   
-                    <td>'.$row['Country'].'</td>
+                    
                     <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                                              
+                    <td>'.$row['Country'].'</td>
+                    <td>'.$value.'</td>
+                    <td>'.$value.'</td>                                              
                     <td>                        
-                        <button class="btn btn-success btn-sm" name = "button0"  >                            
-                            <a href = "forward.php?addid='.$id.'"  class="text-light"  >     
+                        <button class="btn btn-success btn-sm" name = "button0" onclick="myFunction()" >                            
+                            <a href = "forward.php?addid='.$id.'"  class="text-light"   >     
                                 Add Player
                             </a>
                         </button>
@@ -91,10 +101,13 @@
                 <table class = 'content-table'>
                     <thead class = 'p-3 mb-2 bg-dark text-white'>
                         <tr>
-                            <th >Country</th>
-                            <th >Player ID</th>
+                            <th >Player_ID</th>
+                            <th>Name</th>
                             <th>Position</th>
-                            <th >Name</th>                                                     
+                            <th>Country</th>
+                            <th>Points</th>
+                            <th>Ranking</th>
+                                                                                
                             <th>Select</th>
                         </tr>
                     </thead>
