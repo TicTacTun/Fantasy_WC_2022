@@ -6,20 +6,19 @@
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID'];   
+            $id = $row['Player_ID']; 
+            $value = 0;  
             echo '<tr>                   
-                    <td>'.$row['Country'].'</td>
                     <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                                              
-                    <td>                        
+                    <td>'.$row['Country'].'</td>
+                    <td>'  .$value .'</td> 
+                    <td>'.$value .'</td>                                               
+                    <td>                      
 
                         <button class="btn btn-success btn-sm" name = "button0"  >                            
                             <a href = "forward.php?addid='.$id.'" class="text-light" style="font-weight:bold""  >     
-
-                        <button class="btn btn-success btn-sm" name = "button0">                            
-                            <a href = "forward.php?addid='.$id.'"  class="text-light">     
-
                                 Add Player
                             </a>
                         </button>
@@ -119,30 +118,8 @@
             NEXT
         </button>                    
 
-                <h2 style='font-family: "Times New Roman", Times, serif;'>Forward Players (
-                    <?php 
-                        $nam1 = $_SESSION['name'];
-                        $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
-                        $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
-                    ?>
-                out of 3 )</h2>                
-                <table class = 'content-table'>
-                    <thead class = 'p-3 mb-2 bg-dark text-white'>
-                        <tr>
-                            <th >Country</th>
-                            <th >Player ID</th>
-                            <th>Position</th>
-                            <th >Name</th>                                                     
-                            <th>Select</th>
-                        </tr>
-                    </thead>
-                    <?php                            
-                        $sql = "Select * FROM players where Position='Forward' ";
-                        writeMsgt($conn,$sql);  
-                    ?>
-                    <!----dddddd ---------------------------------------------------  -->
-                </table>                        
-        </div>                    
+                          
+                           
 
     <div>  
 </body>

@@ -32,13 +32,13 @@
             <table id = 'team 'class = 'table table-striped'>
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Player_ID</th>
-                        <th>Name</th>
+                        <th >Player ID</th>
+                        <th >Name</th>  
                         <th>Position</th>
-                        <th>Country</th>
+                        <th >Country</th>
                         <th>Points</th>
                         <th>Ranking</th>
-                                                                               
+                                                                           
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -64,7 +64,7 @@
                             
                                 <td>         
                                     <button class="btn btn-danger " name = "button1" style="background-color:#d10c0c;">
-                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" onclick="<script>">
+                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" onclick="myfunction()">
                                              
                                             Remove
                                         </a>
@@ -84,14 +84,3 @@
 
 </body>
 </html>
-<script>
-myfunction();{
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-        });
-}
-</script>

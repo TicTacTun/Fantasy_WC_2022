@@ -6,11 +6,14 @@
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
             $id = $row['Player_ID'];            
-            echo '<tr>                    
-                    <td>'.$row['Country'].'</td>
+            $value = 0;  
+            echo '<tr>                   
                     <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                                               
+                    <td>'.$row['Country'].'</td>
+                    <td>'  .$value .'</td> 
+                    <td>'.$value .'</td>                                                 
                     <td>                        
                         <button class="btn btn-success btn-sm" name = "button0">
                             <a href = "defender.php?addid='.$id.'" class="text-light" style="font-weight:bold">     
@@ -98,10 +101,13 @@
             <table class = 'content-table' style="background-color: aliceblue;">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Country</th>
-                        <th >PLayer ID</th>
+                        <th >Player ID</th>
+                        <th >Name</th>  
                         <th>Position</th>
-                        <th >Name</th>                                                     
+                        <th >Country</th>
+                        <th>Points</th>
+                        <th>Ranking</th>
+                                                                           
                         <th>Select</th>
                     </tr>
                 </thead>

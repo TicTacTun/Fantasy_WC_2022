@@ -5,12 +5,17 @@
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID'];           
+            $id = $row['Player_ID'];
+            
+            $value = 0;  
             echo '<tr>                   
-                    <td>'.$row['Country'].'</td>
                     <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
-                    <td>'.$row['Name'].'</td>                                               
+                    <td>'.$row['Country'].'</td>
+                    <td>'  .$value .'</td> 
+                    <td>'.$value .'</td>                                               
+                                                                                
                     <td>                        
                         <button class="btn btn-success btn-sm" name = "button0">
                             <a href = "mid_fielder.php?addid='.$id.'" class="text-light" style="font-weight:bold" >     
@@ -93,10 +98,14 @@
             <table class = 'content-table' style="background-color: aliceblue;">
                 <thead class='p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Country</th>
+                        
                         <th >Player ID</th>
+                        <th >Name</th>  
                         <th>Position</th>
-                        <th >Name</th>                                                     
+                        <th >Country</th>
+                        <th>Points</th>
+                        <th>Ranking</th>
+                                                                           
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -116,7 +125,7 @@
             </button>
         </div>
         <div >
-        <button class="btn btn-success btn-lg" onclick="location.href='forward.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
+            <button class="btn btn-success btn-lg" onclick="location.href='forward.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
                 Previous
             </button>
         </div>      
