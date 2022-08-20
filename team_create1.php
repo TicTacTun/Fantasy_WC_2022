@@ -81,7 +81,7 @@
         </div>
         <button class="btn btn-success btn-lg" onclick="window.location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;"
              >
-            Are You Sure about to Submit?
+            Submit
         </button>   
     
     </div> 
