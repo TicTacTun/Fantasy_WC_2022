@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="team_create_backgroun1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     
     <title> Fantasy Team Selection</title>
 </head>
@@ -47,6 +50,7 @@
                     $result = $conn->query($sql11);
                     while ($row = $result->fetch_assoc()){
                         $id = $row['Player_ID'];
+                        $pos = $row['Position'];
                         $value = 0;
                         
                         echo '<tr>
@@ -60,7 +64,7 @@
                             
                                 <td>         
                                     <button class="btn btn-success btn-sm" name = "button1" onclick=function () ">
-                                        <a href = "deleteplayerfant.php?deleteid='.$id.'" class="text-light" > 
+                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" > 
                                             Remove
                                         </a>
                                     </button>
