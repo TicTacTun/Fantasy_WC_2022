@@ -20,10 +20,10 @@
                 
                     <td> 
                         
-                        <button class="btn btn-success btn-sm" name = "button0"  id="formSave" onclick="">
+                        <button class="btn btn-success btn-sm" name = "button0"  >
 
-                        
-                            <a href = "forward.php?addid='.$id.'" class="text-light" >     
+                            
+                            <a href = "forward.php?addid='.$id.'"  class="text-light" >     
                                 Add Player
 
                             </a>
@@ -55,8 +55,8 @@
         
         }
         else{
-            echo "<script>alert('You are moved to next position');</script>";
-            header('location: mid_fielder.php');
+            echo "<script>alert('You are moved to MidFielder position'); window.location.href='mid_fielder.php';</script>";
+            /*header('location: mid_fielder.php');*/
         }
         
        
