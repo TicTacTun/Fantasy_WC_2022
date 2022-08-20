@@ -17,7 +17,7 @@
                     <td>'.$value .'</td>                                               
                     <td>                      
 
-                        <button class="btn btn-success btn-sm" name = "button0"  >                            
+                        <button class="btn btn-success btn-sm" name = "button0" onclick="setTimeout(myFunction, 2000)" >                            
                             <a href = "forward.php?addid='.$id.'" class="text-light" style="font-weight:bold""  >     
                                 Add Player
                             </a>
