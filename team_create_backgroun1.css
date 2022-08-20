@@ -1,5 +1,5 @@
 body,html{
-  height: 200%;
+  height: 120%;
   margin: 0;
 }
 .bg {
@@ -24,7 +24,7 @@ body,html{
     width: 100%;
     font-size: 80px;
     text-align: center;
-    color: rgb(172, 53, 53);
+    color: rgb(180, 32, 32);
     font-family: "Times New Roman", Times, serif;
     
     
@@ -33,45 +33,51 @@ body,html{
     
   }
   h2{
-    background-color: rgb(185, 185, 185);
-  }
-  .column1{
-    width: 30%;
-    float: right;
-    margin-right: 2%;
-    background-color: aliceblue;
+    /*background-color: rgb(255, 255, 255);*/
+    height: 50px;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+    color: #ffffff;
     
-
-  }
-  .column2{
-    width: 30%;
-    float: left;
-    margin-left: 2%;
     
-    background-color: aliceblue;
   }
-  .column3{
-    width: 30%;
-    margin: 0 auto;
-    float: center;
-    
-    background-color: aliceblue;
-  }
-  .column4{
-    width:40%;
+  .column1,.column2,.column3,.column4{
+    width:50%;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
     float: center;
+    
+    font-size: 120%;
+    
+    
+    
+
+  }
+
+
+  .column5{
+    width:50%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 26%;
+    float: center;
     background-color: aliceblue;
+    
     
 
   }
   table tbody {
     display: block;
-    height: 300px;
+    height: 580px;
     overflow-y: scroll;
+    background-color: #e5e3e3;
   }
+  
   
   table thead, table tbody tr {
     display: table;
@@ -79,28 +85,28 @@ body,html{
     table-layout: fixed;
   }
   input[type=text] {
-    width: 30%;
-    padding: 18px 20px;
-    margin: 8px 0;
+    width: 100%;
+    padding: 15px 20px;
+    margin: 8px 0px;
     
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box; 
     margin-top: 5%;
     margin-bottom: 1%;
-    margin-left: 35%;
+    margin-left: 0%;
     float: center;
     background-color: aliceblue;
     
     
   }
   input[type=submit] {
-    width: 5%;
+    width: 25%;
     background-color: #63b366;
     color: white;
     padding: 14px 20px;
-    margin-top: 0.5%;
-    margin-left: 45%;
+    margin-top: 5%;
+    margin-left: 35%;
     margin-bottom: 3%;
     border: none;
     border-radius: 4px;
@@ -110,5 +116,87 @@ body,html{
   input[type=submit]:hover {
     background-color: #78a57a;
   }
+.button0{
+  width: 15%;
   
+}
+form {
+  
+  opacity: 89%;
+  background: rgb(252, 252, 252);
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  
+  background-color: rgb(196, 188, 188);
+  width: 200%;
+  border-radius: 8px;
+  padding: 10px 40px;
+  
+  margin-left: -38%;
+}
+
+.title {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.signupFrm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-top: -0.5%;
+}
+
+.content-table thead tr {
+  background-color:#500808;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 17px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
+
+
+
+a:link {
+  
+  text-decoration: none;
+  color: white;
+  font-style: bo;
+}
+.btn btn-success btn-lg{
+  width: 20% ; 
+  font-weight:bold;
+  font-family: sans-serif; 
+  font: weight 80%;
+}
   
