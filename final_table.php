@@ -3,7 +3,6 @@
     session_start();
                                           
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +38,6 @@
                         <th>Points</th>
                         <th>Ranking</th>
                                                                            
-                        <th>Select</th>
                     </tr>
                 </thead>
                 <?php
@@ -54,23 +52,16 @@
                         $value = 0;
                         
                         echo '<tr>
-                                <td> &nbsp'.$row['Player_ID'].'</td>
-                                <td> &nbsp'.$row['Name'].'</td>
-                                <td> &nbsp'.$row['Position'].'</td>
-                                <td> &nbsp'.$row['Country'].'</td>
-                                <td> &nbsp'.$value.'</td>
-                                <td> &nbsp'.$value.'</td>
+                                <td>'.$row['Player_ID'].'</td>
+                                <td>'.$row['Name'].'</td>
+                                <td>'.$row['Position'].'</td>
+                                <td>'.$row['Country'].'</td>
+                                <td>'.$value.'</td>
+                                <td>'.$value.'</td>
                                                               
                             
-                                <td>         
-                                    <button class="btn btn-danger " name = "button1" style="background-color:#d10c0c;">
-                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" onclick="myfunction()">
-                                             
-                                            Remove
-                                        </a>
-                                    </button>
                                 
-                                </td>
+                                
                             </tr>';
                     }
                     
@@ -79,9 +70,7 @@
                 
             </table>
         </div>
-        <button class="btn btn-success btn-lg" onclick="location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;">
-            Are You Sure about to Submit?
-        </button>   
+        
     
     </div> 
 
