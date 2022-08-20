@@ -12,7 +12,7 @@
             </div>    
             <ul>
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Players</a></li>
+                <li><a href="Players_Info.php">Players</a></li>
                 <li><a href="#">Teams</a></li>
                 <li><a href="#">Fixtures</a></li>
                 <li><a href="#">Leaderboard</a></li>
