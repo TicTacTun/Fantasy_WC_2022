@@ -1,4 +1,4 @@
-<?php require_once ("datbasecon.php");?>
+<?php require_once ("config.php");?>
 <?php
     session_start()
                            
@@ -29,8 +29,8 @@
                 
                 >
                 <form class='form' action="name_fant.php" method="post">
-                    <h2>Enter Your Team Name</h2>
-                    <input   type="text"  name="name"  placeholder="Your team name..">
+                    <h2>Enter Your Fantasy Team Name</h2>
+                    <input   type="text"  name="name"  placeholder="Team Name">
                                 
                     <br>
                     <input type="submit"   name= "submit" value="SUBMIT">

@@ -1,4 +1,4 @@
-<?php require_once ("datbasecon.php");?>
+<?php require_once ("config.php");?>
 
 <?php
     session_start();                       
@@ -13,8 +13,8 @@
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Name'].'</td>                                              
                     <td>                        
-                        <button class="btn btn-success btn-sm" name = "button0"  >                            
-                            <a href = "forward.php?addid='.$id.'"  class="text-light"  >     
+                        <button class="btn btn-success btn-sm" name = "button0">                            
+                            <a href = "forward.php?addid='.$id.'"  class="text-light">     
                                 Add Player
                             </a>
                         </button>

@@ -1,4 +1,4 @@
-<?php require_once ("datbasecon.php");?>
+<?php require_once ("config.php");?>
 <?php
     session_start();
 

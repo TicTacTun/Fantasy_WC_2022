@@ -1,6 +1,6 @@
 <?php
 
-require_once('datbasecon.php');
+require_once('config.php');
 session_start();
 
 
