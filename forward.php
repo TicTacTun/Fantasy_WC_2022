@@ -99,7 +99,7 @@
                 <table class = 'content-table'>
                     <thead class = 'p-3 mb-2 bg-dark text-white'>
                         <tr>
-                            <th >Country</th>
+                            <th >Countryss</th>
                             <th >PLayer ID</th>
                             <th>Position</th>
                             <th >Name</th>                                                     
@@ -110,7 +110,7 @@
                         $sql = "Select * FROM players where Position='Forward' ";
                         writeMsgt($conn,$sql);  
                     ?>
-                    <!---- ---------------------------------------------------  -->
+                    <!----dddddd ---------------------------------------------------  -->
                 </table>
                 
         
