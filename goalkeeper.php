@@ -51,7 +51,7 @@
         
         }
         else{
-            header('location:team_create1.php');
+            echo "<script>alert('Team has been created.Your team has been created with 12 players.'); window.location.href='team_create1.php';</script>";
         }
         
         

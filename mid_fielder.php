@@ -52,7 +52,7 @@
         
         }
         else{
-            header('location: defender.php');
+            echo "<script>alert('Max MidFielder player has been added. You are moved to DEFENDER position'); window.location.href='defender.php';</script>";
         }
         
        

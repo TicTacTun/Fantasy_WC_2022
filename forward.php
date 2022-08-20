@@ -41,7 +41,7 @@
         $sqlF = "Select * FROM $name where Position='Forward'";
         
         $resultF = mysqli_query($conn,$sqlF);
-        if ((mysqli_num_rows($resultF)<3)) {
+        if (( mysqli_num_rows($resultF)<3)) {
             $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
@@ -55,7 +55,7 @@
         
         }
         else{
-            echo "<script>alert('You are moved to MidFielder position'); window.location.href='mid_fielder.php';</script>";
+            echo "<script>alert('Max Forward player has been added. You are moved to MidFielder position'); window.location.href='mid_fielder.php';</script>";
             /*header('location: mid_fielder.php');*/
         }
         
@@ -99,7 +99,7 @@
                 <table class = 'content-table'>
                     <thead class = 'p-3 mb-2 bg-dark text-white'>
                         <tr>
-                            <th >Countryss</th>
+                            <th >Country</th>
                             <th >PLayer ID</th>
                             <th>Position</th>
                             <th >Name</th>                                                     

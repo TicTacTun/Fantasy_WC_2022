@@ -52,7 +52,7 @@
         
         }
         else{
-            header('location: goalkeeper.php');
+            echo "<script>alert('Max Defender player has been added. You are moved to Goalkeeper position'); window.location.href='goalkeeper.php';</script>";
         }
         
        
