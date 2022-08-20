@@ -1,4 +1,4 @@
-<?php require_once ("DB.php");
+<?php require_once ("config.php");
 ?>
 
 <!doctype html>
