@@ -32,7 +32,7 @@
 
                     
 
-                    <h2>Enter Your Fantasy Team Name</h2>
+                    <h2 style="color:#500808;">Enter Your Fantasy Team Name</h2>
                     <input   type="text"  name="name"  placeholder="Team Name">
 
                                 
