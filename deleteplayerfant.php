@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
 <?php
 session_start();
-require_once('datbasecon.php');
+require_once('config.php');
 
 if (isset($_GET['deleteid']) && $_GET['pos']){
     $id = $_GET['deleteid'];

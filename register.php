@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
 				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn" style="background: #580909">Register</button>
+				<button name="submit" class="btn" style="background: #580909">Register </button>
 			</div>
 			<p class="login-register-text">Already Have an account? <a href="index.php" style="color: #580909">Login Here</a>.</p>
 		</form>

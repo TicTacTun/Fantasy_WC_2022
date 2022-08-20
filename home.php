@@ -16,14 +16,14 @@
                 <li><a href="#">Teams</a></li>
                 <li><a href="#">Fixtures</a></li>
                 <li><a href="#">Leaderboard</a></li>
-                <li><a href="#">Log Out</a></li>
+                <li><a href="logout.php">Log Out</a></li>
             </ul>
         </div>
         <div class="title">
             <h1>Fantasy WC 2022</h1>
         </div>
         <div class="button">
-            <a href="#" class="btn">Fantasy Team</a>
+            <a href="team_name_enter.php" class="btn">Fantasy Team</a>
             <a href="#" class="btn">Prediction</a>
     </header>
 </body>

@@ -1,30 +1,25 @@
-<?php require_once ("datbasecon.php");?>
-<script>
-function myFunction() {
-  alert("I am an alert box!");
-}
-</script>
-<?php
+<?php require_once ("config.php");?>
 
+<?php
     session_start();                       
     function writeMsgt($conn,$sql) {       
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID']; 
-            $value =0 ; 
-            $hello ='hello';
+            $id = $row['Player_ID'];   
             echo '<tr>                   
-                    
-                    <td>'.$row['Player_ID'].'</td>
-                    <td>'.$row['Name'].'</td>
-                    <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'.$value.'</td>
-                    <td>'.$value.'</td>                                              
+                    <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['Position'].'</td>
+                    <td>'.$row['Name'].'</td>                                              
                     <td>                        
+
                         <button class="btn btn-success btn-sm" name = "button0"  >                            
                             <a href = "forward.php?addid='.$id.'" class="text-light" style="font-weight:bold""  >     
+
+                        <button class="btn btn-success btn-sm" name = "button0">                            
+                            <a href = "forward.php?addid='.$id.'"  class="text-light">     
+
                                 Add Player
                             </a>
                         </button>
@@ -91,6 +86,7 @@ function myFunction() {
             <header>Team Creation</header>            
         </div>        
         <div class="column1" >                
+
             <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Forward Players (
                 <?php 
                     $nam1 = $_SESSION['name'];
@@ -122,6 +118,32 @@ function myFunction() {
         <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;background-color:#500808;">
             NEXT
         </button>                    
+
+                <h2 style='font-family: "Times New Roman", Times, serif;'>Forward Players (
+                    <?php 
+                        $nam1 = $_SESSION['name'];
+                        $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
+                        $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                    ?>
+                out of 3 )</h2>                
+                <table class = 'content-table'>
+                    <thead class = 'p-3 mb-2 bg-dark text-white'>
+                        <tr>
+                            <th >Country</th>
+                            <th >Player ID</th>
+                            <th>Position</th>
+                            <th >Name</th>                                                     
+                            <th>Select</th>
+                        </tr>
+                    </thead>
+                    <?php                            
+                        $sql = "Select * FROM players where Position='Forward' ";
+                        writeMsgt($conn,$sql);  
+                    ?>
+                    <!----dddddd ---------------------------------------------------  -->
+                </table>                        
+        </div>                    
+
     <div>  
 </body>
 </html>
