@@ -79,11 +79,20 @@
                 
             </table>
         </div>
-        <button class="btn btn-success btn-lg" onclick="location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;">
+        <button class="btn btn-success btn-lg" onclick="window.location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;"
+             >
             Are You Sure about to Submit?
         </button>   
     
     </div> 
-
+<script>
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+    })
+</script>"
 </body>
 </html>
