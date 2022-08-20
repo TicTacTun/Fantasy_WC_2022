@@ -27,13 +27,13 @@
         <div class='signupFrm'>
             <div class = "team_name">
                 
-                >
+                
                 <form class='form' action="name_fant.php" method="post">
-                    <h2>Enter Your Team Name</h2>
+                    <title>Enter Your Team Name </title>
                     <input   type="text"  name="name"  placeholder="Your team name..">
                                 
                     <br>
-                    <input type="submit"   name= "submit" value="SUBMIT">
+                    <input type="submit" style="background-color:#500808;" name= "submit" value="SUBMIT">
                 </form>
             </div>
         </div>   

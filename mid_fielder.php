@@ -13,7 +13,7 @@
                     <td>'.$row['Name'].'</td>                                               
                     <td>                        
                         <button class="btn btn-success btn-sm" name = "button0">
-                            <a href = "mid_fielder.php?addid='.$id.'" class="text-light" >     
+                            <a href = "mid_fielder.php?addid='.$id.'" class="text-light" style="font-weight:bold" >     
                                 Add Player
                             </a>
                         </button>
@@ -80,7 +80,7 @@
             <header>Team Creation</header>            
         </div>         
         <div class="column2">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>MidFielder (
+            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>MidFielder (
             
                 <?php 
                     $nam1 = $_SESSION['name'];
@@ -90,7 +90,7 @@
                 ?>
                 out of 4 )</h2>
             </h2>
-            <table class = 'content-table'>
+            <table class = 'content-table' style="background-color: aliceblue;">
                 <thead class='p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>
@@ -109,7 +109,17 @@
                 </tbody>
                 <!---- ---------------------------------------------------  -->
             </table>
-        </div>    
+        </div>
+        <div>
+            <button class="btn btn-success btn-lg" onclick="location.href='defender.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 60%; margin-bottom:5%;background-color:#500808;">
+                NEXT
+            </button>
+        </div>
+        <div >
+        <button class="btn btn-success btn-lg" onclick="location.href='forward.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
+                Previous
+            </button>
+        </div>      
     </div>   
 </body>
 </html>

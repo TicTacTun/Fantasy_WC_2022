@@ -27,8 +27,8 @@
             <header>Here is Your Fantasy Team</header> 
         </div> 
         
-        <div class="column5" >
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Team <?php echo $_SESSION['name']?> </h2>
+        <div class="column4" >
+            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Team <?php echo $_SESSION['name']?> </h2>
             <table id = 'team 'class = 'table table-striped'>
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
@@ -63,8 +63,9 @@
                                                               
                             
                                 <td>         
-                                    <button class="btn btn-success btn-sm" name = "button1" onclick=function () ">
-                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" > 
+                                    <button class="btn btn-danger " name = "button1" style="background-color:#d10c0c;">
+                                        <a href = "deleteplayerfant.php?deleteid='.$id.'&pos='.$pos.'" class="text-light" onclick="<script>">
+                                             
                                             Remove
                                         </a>
                                     </button>
@@ -83,3 +84,14 @@
 
 </body>
 </html>
+<script>
+myfunction();{
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+        });
+}
+</script>

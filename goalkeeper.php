@@ -22,7 +22,7 @@
                         
                             
                         <button  class="btn btn-success btn-sm" name = "button0">
-                            <a href = "goalkeeper.php?addid='.$id.'" class="text-light" > 
+                            <a href = "goalkeeper.php?addid='.$id.'" class="text-light" style="font-weight:bold" > 
                                 Add Player
                             </a>
                             
@@ -94,8 +94,8 @@
             <
         </div> 
         
-        <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif;'>Goalkeeper(
+        <div class="column4">
+            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Goalkeeper(
                 
                 <?php 
                     $nam1 = $_SESSION['name'];
@@ -103,7 +103,7 @@
                     $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
                 ?>
                 out of 1 )</h2></h2>
-            <table class = 'content-table'>
+            <table class = 'content-table' style="background-color: aliceblue;">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Country</th>
@@ -125,7 +125,16 @@
             </table>
         </div>
 
-        
+        <div>
+            <button class="btn btn-success btn-lg" onclick="location.href='team_create1.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 60%; margin-bottom:5%;background-color:#500808;">
+                NEXT
+            </button>
+        </div>
+        <div >
+            <button class="btn btn-success btn-lg" onclick="location.href='defender.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
+                Previous
+            </button>
+        </div>     
     
     </div> 
   

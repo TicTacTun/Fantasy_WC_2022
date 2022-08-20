@@ -23,8 +23,8 @@ function myFunction() {
                     <td>'.$value.'</td>
                     <td>'.$value.'</td>                                              
                     <td>                        
-                        <button class="btn btn-success btn-sm" name = "button0" onclick="myFunction()" >                            
-                            <a href = "forward.php?addid='.$id.'"  class="text-light"   >     
+                        <button class="btn btn-success btn-sm" name = "button0"  >                            
+                            <a href = "forward.php?addid='.$id.'" class="text-light" style="font-weight:bold""  >     
                                 Add Player
                             </a>
                         </button>
@@ -91,33 +91,37 @@ function myFunction() {
             <header>Team Creation</header>            
         </div>        
         <div class="column1" >                
-                <h2 style='font-family: "Times New Roman", Times, serif;'>Forward Players (
-                    <?php 
-                        $nam1 = $_SESSION['name'];
-                        $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
-                        $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
-                    ?>
-                out of 3 )</h2>                
-                <table class = 'content-table'>
-                    <thead class = 'p-3 mb-2 bg-dark text-white'>
-                        <tr>
-                            <th >Player_ID</th>
-                            <th>Name</th>
-                            <th>Position</th>
-                            <th>Country</th>
-                            <th>Points</th>
-                            <th>Ranking</th>
-                                                                                
-                            <th>Select</th>
-                        </tr>
-                    </thead>
-                    <?php                            
-                        $sql = "Select * FROM players where Position='Forward' ";
-                        writeMsgt($conn,$sql);  
-                    ?>
-                    <!----dddddd ---------------------------------------------------  -->
-                </table>                        
-        </div>                    
+            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Forward Players (
+                <?php 
+                    $nam1 = $_SESSION['name'];
+                    $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
+                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                ?>
+            out of 3 )</h2>                
+            <table class = 'content-table' style = 'background-color: aliceblue;'>
+                <thead class = 'p-3 mb-2 bg-dark text-white'>
+                    <tr>
+                        <th >Player_ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Country</th>
+                        <th>Points</th>
+                        <th>Ranking</th>
+                                                                            
+                        <th>Select</th>
+                    </tr>
+                </thead>
+                <?php                            
+                    $sql = "Select * FROM players where Position='Forward' ";
+                    writeMsgt($conn,$sql);  
+                ?>
+                <!----dddddd ---------------------------------------------------  -->
+            </table>
+                                      
+        </div>
+        <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;background-color:#500808;">
+            NEXT
+        </button>                    
     <div>  
 </body>
 </html>

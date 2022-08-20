@@ -1,5 +1,5 @@
 body,html{
-  height: 110%;
+  height: 120%;
   margin: 0;
 }
 .bg {
@@ -24,7 +24,7 @@ body,html{
     width: 100%;
     font-size: 80px;
     text-align: center;
-    color: rgb(172, 53, 53);
+    color: rgb(180, 32, 32);
     font-family: "Times New Roman", Times, serif;
     
     
@@ -33,13 +33,15 @@ body,html{
     
   }
   h2{
-    background-color: rgb(255, 255, 255);
+    /*background-color: rgb(255, 255, 255);*/
     height: 50px;
     width: 100%;
     font-size: 80px;
     text-align: center;
     border-radius: 20px;
     margin-bottom: 1rem;
+    color: #ffffff;
+    
     
   }
   .column1,.column2,.column3,.column4{
@@ -48,7 +50,7 @@ body,html{
     margin-top: 5%;
     margin-bottom: 5%;
     float: center;
-    background-color: aliceblue;
+    
     font-size: 120%;
     
     
@@ -62,7 +64,7 @@ body,html{
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    margin-left: 3%;
+    margin-left: 26%;
     float: center;
     background-color: aliceblue;
     
@@ -73,6 +75,7 @@ body,html{
     display: block;
     height: 580px;
     overflow-y: scroll;
+    background-color: #e5e3e3;
   }
   
   
@@ -82,9 +85,9 @@ body,html{
     table-layout: fixed;
   }
   input[type=text] {
-    width: 100%;
+    width: 150%;
     padding: 15px 20px;
-    margin: 8px 0;
+    margin: 8px 0px;
     
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -115,13 +118,19 @@ body,html{
   }
 .button0{
   width: 15%;
+  
 }
 form {
-  background-color: white;
+  
+  opacity: 89%;
+  background: rgb(252, 252, 252);
+  box-shadow: 0 0 5px rgba(0,0,0,.3);
+  
+  background-color: rgb(196, 188, 188);
   width: 200%;
   border-radius: 8px;
   padding: 10px 40px;
-  box-shadow: 0 50px 25px rgba(92, 99, 105, .2);
+  
   margin-left: -38%;
 }
 
@@ -148,7 +157,7 @@ form {
 }
 
 .content-table thead tr {
-  background-color: #9e250f;
+  background-color:#500808;
   color: #ffffff;
   text-align: left;
   font-weight: bold;
@@ -156,7 +165,7 @@ form {
 
 .content-table th,
 .content-table td {
-  padding: 12px 15px;
+  padding: 12px 17px;
 }
 
 .content-table tbody tr {
@@ -176,5 +185,18 @@ form {
   color: #009879;
 }
 
+
+
+a:link {
   
+  text-decoration: none;
+  color: white;
+  font-style: bo;
+}
+.btn btn-success btn-lg{
+  width: 20% ; 
+  font-weight:bold;
+  font-family: sans-serif; 
+  font: weight 80%;
+}
   
