@@ -1,3 +1,7 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url(Qatar2022Arabic-Bold.ttf);
+}
 body,html{
   height: 150%;
   margin: 0;
@@ -25,7 +29,7 @@ body,html{
     font-size: 80px;
     text-align: center;
     color: rgb(180, 32, 32);
-    font-family: "Times New Roman", Times, serif;
+    font-family:'myFirstFont';
     
     
     
@@ -196,7 +200,7 @@ a:link {
 .btn btn-success btn-lg{
   width: 20% ; 
   font-weight:bold;
-  font-family: sans-serif; 
+  font-family:'myFirstFont'; 
   font: weight 80%;
 }
   

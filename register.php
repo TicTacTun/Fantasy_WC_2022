@@ -18,13 +18,14 @@ if (isset($_POST['submit'])) {
 	$phoneno = $_POST['phoneno'];
 	$password = $_POST['password'];
 	$cpassword = $_POST['cpassword'];
+	$_SESSION['uname']= $_POST['username'];
 
 	if ($password == $cpassword) {
 		$sql = "SELECT * FROM users WHERE email='$email'";
 		$result = mysqli_query($conn, $sql);
 		if (!$result->num_rows > 0) {
-			$sql = "INSERT INTO users (username, email, gender, country, phoneno, pass)
-					VALUES ('$username', '$email', '$gender', '$country', '$phoneno', '$password')";
+			$sql = "INSERT INTO users (username, email, gender, country, phoneno, pass,status)
+					VALUES ('$username', '$email', '$gender', '$country', '$phoneno', '$password','unsubmitted')";
 			$result = mysqli_query($conn, $sql);
 			if ($result) {
 				echo "<script>alert('Wow! User Registration Completed.')</script>";
