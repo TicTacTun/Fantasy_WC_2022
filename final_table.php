@@ -41,30 +41,37 @@
                     </tr>
                 </thead>
                 <?php
+                    $email = $_SESSION['email-log'];
                     
-                    $name11 = $_SESSION['name'];
-                    $sql11 = "SELECT * FROM $name11 ";
                     
-                    $result = $conn->query($sql11);
-                    while ($row = $result->fetch_assoc()){
-                        $id = $row['Player_ID'];
-                        $pos = $row['Position'];
-                        $value = 0;
+                
+                    $query = "SELECT* FROM `user-table-conn` WHERE `email`='$email';";                   
+                    $conttable = mysqli_query($conn,$query);
+                    while ($row = $conttable->fetch_assoc()){
+                        $table_name = $row['Contab'];
+                    
+                        $sql11 = "SELECT * FROM $table_name ";
+                        $result = $conn->query($sql11);
                         
-                        echo '<tr>
-                                <td>'.$row['Player_ID'].'</td>
-                                <td>'.$row['Name'].'</td>
-                                <td>'.$row['Position'].'</td>
-                                <td>'.$row['Country'].'</td>
-                                <td>'.$value.'</td>
-                                <td>'.$value.'</td>
-                                                              
+                        while ($row = $result->fetch_assoc()){
+                            $id = $row['Player_ID'];
+                            $pos = $row['Position'];
+                            $value = 0;
                             
+                            echo '<tr>
+                                    <td>'.$row['Player_ID'].'</td>
+                                    <td>'.$row['Name'].'</td>
+                                    <td>'.$row['Position'].'</td>
+                                    <td>'.$row['Country'].'</td>
+                                    <td>'.$value.'</td>
+                                    <td>'.$value.'</td>
+                                                                
                                 
-                                
-                            </tr>';
-                    }
-                    
+                                    
+                                    
+                                </tr>';
+                        }
+                    }    
 
                 ?>
                 

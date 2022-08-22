@@ -11,8 +11,11 @@ if (!empty($_POST['name']) && $_POST["submit"]){
     $result1 = mysqli_query($conn,$sql1);
     
     $sql = "CREATE TABLE `$team_name` ( Country VARCHAR(30) ,Player_ID VARCHAR(30) UNIQUE KEY, Points INT(6) ,Ranking int(10) , Name VARCHAR(30) , Position VARCHAR(50))";
-    
     $result = mysqli_query($conn,$sql);
+    $email = $_SESSION['email-log'];
+    $conTable ="INSERT INTO `user-table-conn`(`email`, `Contab`) VALUES ('$email','$team_name')";
+    $conTable_result = mysqli_query($conn,$conTable);
+
     if ($result){
         header('location:forward.php');
     }
