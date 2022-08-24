@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
 <body style="justify-content: right; background-size: contain; background-position: left; background-repeat: no-repeat; background-color: #260303;">
 	<div class="container" style="background: rgb(255, 255, 255); margin-right: 240px;">
 		<form action="" method="POST" class="login-email">
-            <p class="login-text" style="font-size: 2rem; font-weight: 800; color: #580909;">Register</p>
+            <p class="login-text" style="font-size: 2rem; font-weight: 800; color: #580909;font-family:'myFirstFont'">Register</p>
 			<div class="input-group">
 				<input type="text" placeholder="Username" name="username" value="<?php echo $username; ?>" required>
 			</div>
@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
 				<input type="password" placeholder="Confirm Password" name="cpassword" value="<?php echo $_POST['cpassword']; ?>" required>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn" style="background: #580909">Register </button>
+				<button name="submit" class="btn" style="background: #580909 ;font-family:'myFirstFont'">Register </button>
 			</div>
 			<p class="login-register-text">Already Have an account? <a href="index.php" style="color: #580909">Login Here</a>.</p>
 		</form>

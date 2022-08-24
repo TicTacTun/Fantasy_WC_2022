@@ -84,8 +84,7 @@
         <div>
             <header>Team Creation</header>            
         </div>        
-        <div class="column1" >                
-
+        <div class="column1" > 
             <h2 style='font-family:"myFirstFont"; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Forward Players (
                 <?php 
                     $nam1 = $_SESSION['name'];

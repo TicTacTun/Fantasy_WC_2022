@@ -48,9 +48,9 @@ if (isset($_POST['submit'])) {
 	<title>Login Form - Fantasy WC 2022</title>
 </head>
 <body style="justify-content: right; background-size: contain; background-position: left; background-repeat: no-repeat; background-color: #260303;">
-	<div class="container" style="background: rgb(255, 255, 255); margin-right: 240px;">
-		<form action="" method="POST" class="login-email">
-			<p class="login-text" style="font-size: 2rem; font-weight: 800; color: #580909;">Login</p>
+	<div class="container" style="background: rgb(255, 255, 255); margin-right: 240px;font-family:'myFirstFont'">
+		<form action="" method="POST" class="login-email" style="font-family:'myFirstFont'">
+			<p class="login-text" style="font-size: 2rem; font-weight: 800; color: #580909;font-family:'myFirstFont'">Login</p>
 			<div class="input-group">
 				<input type="email" placeholder="Email" name="email" value="<?php echo $email; ?>" required>
 			</div>
@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 				<input type="password" placeholder="Password" name="password" value="<?php echo $_POST['password']; ?>" required>
 			</div>
 			<div class="input-group">
-				<button name="submit" class="btn" style= "background: #580909;">Login</button>
+				<button name="submit" class="btn" style= "background: #580909;font-family:'myFirstFont'">Login</button>
 			</div>
 			<p class="login-register-text">Don't have an account? <a href="register.php" style="color: #580909;">Register Here</a>.</p>
 		</form>
