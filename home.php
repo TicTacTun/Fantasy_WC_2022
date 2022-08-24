@@ -26,7 +26,8 @@
             <?php
                 require_once 'config.php';
                 session_start();
-                $uname = $_SESSION['uname'];
+                $uname = $_SESSION['username'];
+                $email = $_SESSION['email-log'];
                 
                 $sql = "SELECT `status` FROM `users` WHERE username='$uname'";
                 $result = $conn->query($sql);
