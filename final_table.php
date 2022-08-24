@@ -27,7 +27,12 @@
         </div> 
         
         <div class="column4" >
-            <h2 style='font-family:"myFirstFont", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Team <?php echo $_SESSION['name']?> </h2>
+            <h2 style='font-family:"myFirstFont", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'> Fantasy Team : <?php $email = $_SESSION['email-log'];
+                    $query = "SELECT `Contab` FROM `user-table-conn` WHERE `email`='$email';";                   
+                    $conttable = mysqli_query($conn,$query);
+                    while ($row = $conttable->fetch_assoc()){
+                        $table_name = $row['Contab'];}
+                        echo $table_name;?>  </h2>
             <table id = 'team 'class = 'table table-striped' style="font-family:'myFirstFont';">
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
