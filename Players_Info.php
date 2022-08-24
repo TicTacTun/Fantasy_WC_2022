@@ -59,7 +59,7 @@
                                     if(isset($_GET['search']))
                                     {
                                         $filtervalues = $_GET['search'];
-                                        $query = "SELECT * FROM info WHERE CONCAT(name,country) LIKE '%$filtervalues%' ";
+                                        $query = "SELECT * FROM players WHERE CONCAT(Name,Country) LIKE '%$filtervalues%' ";
                                         $query_run = mysqli_query($conn, $query);
 
                                         if(mysqli_num_rows($query_run) > 0)
@@ -68,13 +68,13 @@
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $items['id']; ?></td>
-                                                    <td><?= $items['name']; ?></td>
+                                                    <td><?= $items['Player_ID']; ?></td>
+                                                    <td><?= $items['Name']; ?></td>
                                                     <td><?= $items['age']; ?></td>
-                                                    <td><?= $items['position']; ?></td>
+                                                    <td><?= $items['Position']; ?></td>
                                                     <td><?= $items['apps']; ?></td>
                                                     <td><?= $items['goals']; ?></td>
-                                                    <td><?= $items['country']; ?></td>
+                                                    <td><?= $items['Country']; ?></td>
 
                                                 </tr>
                                                 <?php
@@ -124,7 +124,7 @@
 			
 
             // read all row from database table
-			$sql = "SELECT * FROM info";
+			$sql = "SELECT * FROM players";
 			$result = $conn->query($sql);
 
             if (!$result) {
@@ -134,13 +134,13 @@
             // read data of each row
 			while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td>" . $row["id"] . "</td>
-                    <td>" . $row["name"] . "</td>
+                    <td>" . $row["Player_ID"] . "</td>
+                    <td>" . $row["Name"] . "</td>
                     <td>" . $row["age"] . "</td>
-                    <td>" . $row["position"] . "</td>
+                    <td>" . $row["Position"] . "</td>
                     <td>" . $row["apps"] . "</td>
                     <td>" . $row["goals"] . "</td>
-                    <td>" . $row["country"] . "</td>
+                    <td>" . $row["Country"] . "</td>
 
 
 
