@@ -80,7 +80,7 @@
 </head>
 
 <body>    
-    <div class='bg'>
+    <div class='bg' style="height:125% ;">
         <div>
             <header>Team Creation</header>            
         </div>        

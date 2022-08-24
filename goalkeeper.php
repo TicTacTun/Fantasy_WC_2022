@@ -87,7 +87,7 @@
 
 <body>
     
-    <div class='bg'>
+    <div class='bg' style="height:135% ;">
         <div>
             <header>Team Creation</header>
             <
