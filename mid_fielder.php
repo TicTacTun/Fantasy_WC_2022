@@ -91,7 +91,10 @@
                     $nam1 = $_SESSION['name'];
                     $sqlF = "Select * FROM $nam1 where Position='MidFielder'"; 
                     $resultF = mysqli_query($conn,$sqlF); 
-                    echo mysqli_num_rows($resultF)
+                    $sql2 = "select count(*) FROM `$nam1`";
+                    $result2 = mysqli_query($conn,$sql2);
+                    $row = mysqli_fetch_array($result2);
+                    echo $row[0];
                 ?>
                 out of 4 )</h2>
             </h2>

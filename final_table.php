@@ -55,7 +55,7 @@
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];
                     
-                        $sql11 = "SELECT * FROM $table_name ";
+                        $sql11 = "SELECT * FROM `$table_name` ";
                         $result = $conn->query($sql11);
                         
                         while ($row = $result->fetch_assoc()){
