@@ -18,8 +18,16 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($conn, $sql);
 	if ($result->num_rows > 0) {
 		$row = mysqli_fetch_assoc($result);
-		$_SESSION['username'] = $row['username'];
-		header("Location: home.php");
+		if ($row["usertype"]=="user")
+        {
+            header("location: home.php");
+        }
+        elseif ($row["usertype"]=="admin")
+        {
+            header("location: adminhome.php");
+        }
+		/*$_SESSION['username'] = $row['username'];
+		header("Location: home.php");*/
 	} else {
 		echo "<script>alert('Woops! Email or Password is Wrong.')</script>";
 	}

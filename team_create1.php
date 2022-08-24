@@ -22,7 +22,7 @@
 
 <body>
     
-    <div class='bg'>
+    <div class='bg' style="height: 150%;">
         <div>
             <header>Here is Your Fantasy Team</header> 
         </div> 

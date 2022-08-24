@@ -90,7 +90,9 @@
                 <?php 
                     $nam1 = $_SESSION['name'];
                     $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
-                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                    $result = mysqli_query($conn,$sqlF); 
+                    echo mysqli_num_rows($result);
+                    
                 ?>
             out of 3 )</h2>                
             <table class = 'content-table' style = 'background-color: aliceblue;font-family:"myFirstFont"'>
