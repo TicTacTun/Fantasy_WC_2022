@@ -34,11 +34,11 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='GoalKeeper'";
+        $sqlF = "Select * FROM `$name` where Position='GoalKeeper'";
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<1)) {
-            $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
                 
@@ -53,7 +53,7 @@
             echo    '<script>
                         setTimeout(function() {
                             swal({
-                                title: "All 4 out of 4 Member has been added",
+                                title: "All 1 out of 1 Member has been added",
                                 text :" You cant add more member! ",
                                 type: "success",
                             }, function() {
@@ -98,15 +98,11 @@
                 
                 <?php 
                     $nam1 = $_SESSION['name'];
-                    $sqlF = "Select * FROM $nam1 where Position='GoalKeeper'"; 
+                    $sqlF = "Select * FROM `$nam1` where Position='GoalKeeper'"; 
                     $resultF = mysqli_query($conn,$sqlF);
-                    
-                    $sql2 = "select count(*) FROM `$nam1`";
-                    $result2 = mysqli_query($conn,$sql2);
-                    $row = mysqli_fetch_array($result2);
-                    echo $row[0];
+                    echo mysqli_num_rows($resultF);
                 ?>
-                out of 1 )</h2></h2>
+                out of 1 )</h2>
             <table class = 'content-table' style="background-color: aliceblue;font-family:'myFirstFont';">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>

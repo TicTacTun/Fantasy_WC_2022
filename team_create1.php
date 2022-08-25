@@ -45,7 +45,7 @@
                 <?php
                     
                     $name11 = $_SESSION['name'];
-                    $sql11 = "SELECT * FROM $name11 ";
+                    $sql11 = "SELECT * FROM `$name11` ";
                     
                     $result = $conn->query($sql11);
                     while ($row = $result->fetch_assoc()){

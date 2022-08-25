@@ -35,7 +35,7 @@
         $resultF = mysqli_query($conn,$sqlF);
 
         if (( mysqli_num_rows($resultF)<3)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){  
 
@@ -90,11 +90,7 @@
                     $nam1 = $_SESSION['name'];
                     $sqlF = "Select * FROM `$nam1` where Position='Forward'"; 
                     $result = mysqli_query($conn,$sqlF); 
-                    
-                    $sql2 = "select count(*) FROM `$nam1`";
-                    $result2 = mysqli_query($conn,$sql2);
-                    $row = mysqli_fetch_array($result2);
-                    echo $row[0];
+                    echo mysqli_num_rows($result);
 
                     
                 ?>
