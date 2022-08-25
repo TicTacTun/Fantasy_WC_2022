@@ -39,15 +39,25 @@
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<1)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
-            $result = mysqli_query($conn,$sql);
-            if ($result ){
+            try{
+                $result = mysqli_query($conn,$sql);
                 
-                header('location:goalkeeper.php');
-            }
-            else{
-                mysqli_error($conn);
-            }
-        
+                if ($result ){                
+                    header('location:team_create1.php');
+                }}
+                catch (Exception $e){
+                    echo '<script>
+                    setTimeout(function() {
+                        swal({
+                            title: "Cant add same player!",
+                            
+                            type: "warning",
+                        }, function() {
+                        window.location = "goalkeeper.php";
+                        });
+                    }, 1000);
+                </script>';}
+
         }
         else{
             echo    '<script>
