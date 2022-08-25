@@ -82,6 +82,12 @@
         <button class="btn btn-success btn-lg" onclick="window.location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45%;"
              >
             Submit
+        </button>
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-success btn-lg" onclick="window.location.href='goalkeeper.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45% ;background-color:#500808;">
+            Go previous
         </button>   
     
     </div> 

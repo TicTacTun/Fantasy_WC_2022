@@ -85,6 +85,7 @@
         <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45%;background-color:#500808;">
             Go to HOME
         </button> 
+         
     
     </div> 
 
