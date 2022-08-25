@@ -40,7 +40,17 @@
                 header('location:defender.php');
             }
             else{
-                mysqli_error($conn);
+                echo '<script>
+                    setTimeout(function() {
+                        swal({
+                            title: "Cant add same player",
+                            
+                            type: "warning",
+                        }, function() {
+                            window.location.href= "defender.php";
+                        });
+                    }, 1000);
+            </script>';
             }
         
         }
