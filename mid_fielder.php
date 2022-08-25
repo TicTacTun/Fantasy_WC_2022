@@ -31,7 +31,7 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='MidFielder'";
+        $sqlF = "Select * FROM `$name` where Position='MidFielder'";
         
         $resultF = mysqli_query($conn,$sqlF);
         $row = mysqli_num_rows($resultF);
@@ -123,7 +123,7 @@
                 <tbody >          
                     <?php
 
-                        $sql = "Select * FROM players where Position='MidFielder'";
+                        $sql = "Select * FROM `players` where Position='MidFielder'";
                         WriteMsgt($conn,$sql);                                         
                     ?>                       
                 </tbody>

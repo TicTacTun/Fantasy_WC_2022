@@ -29,11 +29,11 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='defender'";
+        $sqlF = "Select * FROM `$name` where Position='defender'";
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
                 
@@ -125,7 +125,7 @@
                 <tbody>
 
                     <?php           
-                        $sql = "Select * FROM players where Position='Defender'";
+                        $sql = "Select * FROM `players` where Position='Defender'";
                         writeMsgt($conn,$sql);
                     ?>
                     

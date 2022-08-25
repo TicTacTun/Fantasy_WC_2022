@@ -119,7 +119,7 @@
                 <tbody>
 
                     <?php           
-                        $sql = "Select * FROM players where Position='GoalKeeper'";
+                        $sql = "Select * FROM `players` where Position='GoalKeeper'";
                         writeMsgt($conn,$sql);
                     ?>
                     
