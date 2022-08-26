@@ -17,7 +17,7 @@
             width: 120px;
         }
         table { background-color: aliceblue; }
-        header{
+        body{
 
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
 
@@ -55,7 +55,7 @@
         
         
     </style>
-    <body style="background-color:powderblue;">
+    <body >
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
