@@ -33,7 +33,7 @@
                     
                     <table class="table table-striped">
                         <thead >
-                            <th>email</th>
+                            <th>user-email</th>
                             <th>Connection Table</th>
                             <th>Action</th>
                             
