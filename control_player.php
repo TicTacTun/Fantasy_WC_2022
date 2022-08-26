@@ -37,10 +37,10 @@
                 <div class="col-md-12">
                     <div class="main">    
                         <ul>
-                            <li class="active"><a href="#">Admin Home</a></li>
+                            <li ><a href="#">Admin Home</a></li>
                             <li><a href="usertest.php">Users</a></li>
                             <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
-                            <li><a href="control_player.php">Players</a></li>
+                            <li class="active"><a href="control_player.php">Players</a></li>
                             <li><a href="#">Points</a></li>
                         </ul>
                     </div>
