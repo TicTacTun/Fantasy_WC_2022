@@ -56,7 +56,7 @@
                                             
                                                 <button class="btn btn-danger btn-sm" name = "button0">
 
-                                                    <a href = "fantasyHandle.php?email='.$email.'&Contab='.$table.'" class="text-light"  style = "text-decoration: none;">
+                                                    <a href = "fantasyadmin.php?email='.$email.'&Contab='.$table.'" class="text-light"  style = "text-decoration: none;">
                                                                         
                                                         Remove
                                                     </a>
