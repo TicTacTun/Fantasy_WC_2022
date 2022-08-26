@@ -10,7 +10,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         .wrapper{
-            width: 1000px;
+            width: 1400px;
             margin: 0 auto;
         }
         table tr td:last-child{
@@ -22,7 +22,7 @@
         
         
     </style>
-    <body style="background-color:blue;">
+    <body style="background-color:bisque;">
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -58,6 +58,9 @@
                                         
                                         echo "<th>Country</th>";
                                         echo "<th>Goal Points</th>";
+                                        echo "<th>Assist Points</th>";
+                                        echo "<th>Clean Sheet Points</th>";
+                                        echo "<th>Total Points</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
                                 echo "</thead>";
@@ -70,6 +73,9 @@
                                         echo "<td>" . $row['Position'] . "</td>";
                                         
                                         echo "<td>" . $row['Country'] . "</td>";
+                                        echo "<td>" . $row['goalp'] . "</td>";
+                                        echo "<td>" . $row['assistp'] . "</td>";
+                                        echo "<td>" . $row['cleanp'] . "</td>";
                                         echo "<td>" . $row['points'] . "</td>";
 
                                         echo "<td>";
