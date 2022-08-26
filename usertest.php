@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="fanadmin.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     
-    <title>Document</title>
+    <title>User Control</title>
 </head>
 <body>
     <header>
@@ -31,13 +31,13 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="card" style="margin-right: -500px; margin-top:15%">
+                <div class="card">
                     <div class="card-header">
                         <h4>User Details
                             <a href="add_user.php" class="btn btn-primary float-end">Add Users</a>
                         </h4>
                     </div>
-                    <div class="card-body" >
+                    <div class="card-body">
 
                         <table class="table table-bordered table-striped">
                             <thead>
@@ -47,6 +47,8 @@
                                     <th>Gender</th>
                                     <th>Country</th>
                                     <th>Phone No.</th>
+                                    <th>User Type</th>
+                                    <th>Submit Status</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,6 +67,8 @@
                                                 <td><?= $row['gender']; ?></td>
                                                 <td><?= $row['country']; ?></td>
                                                 <td><?= $row['phoneno']; ?></td>
+                                                <td><?= $row['usertype']; ?></td>
+                                                <td><?= $row['status']; ?></td>
                                                 <td>
                                                     <a href="user_edit.php?id=<?= $row['email']; ?>" class="btn btn-success btn-sm">Edit</a>
                                                     <form action="user_crud.php" method="POST" class="d-inline">

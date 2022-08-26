@@ -45,8 +45,13 @@ session_start();
                             </div>
                             <div class="mb-3">
                                 <label>Gender</label>
-                                <input type="text" name="gender" class="form-control">
-                            </div>
+			                    <select type="text" name="gender" class="form-control">
+			                    <option value="" disabled selected hidden>Choose Gender</option>
+						        <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                                </select>
+			                </div>
                             <div class="mb-3">
                                 <label>Phone No.</label>
                                 <input type="text" name="phoneno" class="form-control">
