@@ -34,12 +34,14 @@
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
-            $result = mysqli_query($conn,$sql);
-            if ($result ){
-                
-                header('location:defender.php');
-            }
-            else{
+            try{
+
+                $result = mysqli_query($conn,$sql);
+                if ($result ){  
+
+                    header('location:defender.php');
+            }}
+            catch (Exception $e ){
                 echo '<script>
                     setTimeout(function() {
                         swal({

@@ -37,12 +37,14 @@
         $row = mysqli_num_rows($resultF);
         if ((mysqli_num_rows($resultF)<=3)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
-            $result = mysqli_query($conn,$sql);
+            try{
 
-            if ($result ){                
-                header('location:mid_fielder.php');
-            }
-            else{
+                $result = mysqli_query($conn,$sql);
+                if ($result ){  
+
+                    header('location:mid_fielder.php');
+            }}
+            catch (Exception $e ){
                 echo '<script>
                     setTimeout(function() {
                         swal({
