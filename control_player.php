@@ -35,6 +35,15 @@
             <div class="row" >
                 
                 <div class="col-md-12">
+                    <div class="main">    
+                        <ul>
+                            <li class="active"><a href="#">Admin Home</a></li>
+                            <li><a href="usertest.php">Users</a></li>
+                            <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
+                            <li><a href="control_player.php">Players</a></li>
+                            <li><a href="#">Points</a></li>
+                        </ul>
+                    </div>
                     <div class="mt-5 mb-3 clearfix">
                         <h2 class="pull-left">Players Info</h2>
                         <a href="insert_player.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Player</a>
