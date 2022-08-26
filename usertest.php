@@ -59,7 +59,8 @@
                                                 <td>
                                                     <a href="user_edit.php?id=<?= $row['email']; ?>" class="btn btn-success btn-sm">Edit</a>
                                                     <form action="user_crud.php" method="POST" class="d-inline">
-                                                        <button type="submit" name="delete_user" value="<?=$email['email'];?>" class="btn btn-danger btn-sm">Delete</button>
+                                                        
+                                                        <button type="submit" name="delete_user" value="<?=$row['email'];?>" class="btn btn-danger btn-sm">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>

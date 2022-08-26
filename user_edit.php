@@ -32,9 +32,9 @@ require 'config.php';
                     <div class="card-body">
 
                         <?php
-                        if(isset($_GET['email']))
+                        if(isset($_GET['id']))
                         {
-                            $email = mysqli_real_escape_string($conn, $_GET['email']);
+                            $email = mysqli_real_escape_string($conn, $_GET['id']);
                             $query = "SELECT * FROM `users` WHERE email='$email' ";
                             $query_run = mysqli_query($conn, $query);
 

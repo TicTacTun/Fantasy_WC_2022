@@ -33,7 +33,7 @@ if(isset($_POST['update_user']))
     $country = mysqli_real_escape_string($conn, $_POST['country']);
     $phoneno = mysqli_real_escape_string($conn, $_POST['phoneno']);
 
-    $query = "UPDATE `users` SET username='$username', email='$email', gender='$gender', country='$ccountry', phoneno='$phoneno' WHERE email='$email' ";
+    $query = "UPDATE `users` SET username='$username', email='$email', gender='$gender', country='$country', phoneno='$phoneno' WHERE email='$email' ";
     $query_run = mysqli_query($conn, $query);
 
     if($query_run)
