@@ -45,11 +45,20 @@ session_start();
                             </div>
                             <div class="mb-3">
                                 <label>Gender</label>
-                                <input type="text" name="gender" class="form-control">
-                            </div>
+			                    <select type="text" name="gender" class="form-control">
+			                    <option value="" disabled selected hidden>Choose Gender</option>
+						        <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                                </select>
+			                </div>
                             <div class="mb-3">
                                 <label>Phone No.</label>
                                 <input type="text" name="phoneno" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label>Password</label>
+                                <input type="password" name="pass" class="form-control">
                             </div>
                             <div class="mb-3">
                                 <button type="submit" name="save_user" class="btn btn-primary">Save User</button>

@@ -11,13 +11,13 @@ if(isset($_POST['delete_user']))
 
     if($query_run)
     {
-        $_SESSION['message'] = "User Deleted Successfully";
+        
         header("Location: usertest.php");
         exit(0);
     }
     else
     {
-        $_SESSION['message'] = "User Not Deleted";
+       
         header("Location: usertest.php");
         exit(0);
     }
@@ -38,13 +38,13 @@ if(isset($_POST['update_user']))
 
     if($query_run)
     {
-        $_SESSION['message'] = "User Updated Successfully";
+        
         header("Location: usertest.php");
         exit(0);
     }
     else
     {
-        $_SESSION['message'] = "User Not Updated";
+        
         header("Location: usertest.php");
         exit(0);
     }
@@ -59,8 +59,9 @@ if(isset($_POST['save_user']))
   $gender = mysqli_real_escape_string($conn, $_POST['gender']);
   $country = mysqli_real_escape_string($conn, $_POST['country']);
   $phoneno = mysqli_real_escape_string($conn, $_POST['phoneno']);
+  $password = mysqli_real_escape_string($conn, $_POST['pass']);
 
-    $query = "INSERT INTO `users` (username,email,gender,country,phoneno) VALUES ('$username','$email','$gender','$country','$phoneno')";
+    $query = "INSERT INTO `users` (username,email,gender,country,phoneno,pass) VALUES ('$username','$email','$gender','$country','$phoneno','$password')";
 
     $query_run = mysqli_query($conn, $query);
     if($query_run)

@@ -25,6 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($input_id)){
         $id_err = "Please enter an unique id number.";     
     }
+    
     elseif(mysqli_num_rows($id_query_run)>0){
         $id_err = "This value already exists. Please enter another unique value.";
     }
