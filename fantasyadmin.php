@@ -79,7 +79,7 @@
                                     $sql3 = "UPDATE `users` SET status ='unsubmitted'  WHERE email = '$email1';";
                                     $result3 = mysqli_query($conn,$sql3);
                                     if ($result){
-                                        header('location:fantasyHandle.php');
+                                        header('location:fantasyadmin.php');
                                     
                                     }
                                 }
