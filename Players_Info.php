@@ -136,7 +136,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
 
     
     
@@ -187,73 +186,13 @@
 
                     </tr>";
 
-=======
+          }
     
-    <div class="wrapper">
-        <div class="container-fluid">
-            <div class="row" >
-                
-                <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        
-                        <h2 class="pull-left"><h2 style="color:#fff" >List of Players</h2>
-                        
-                    </div>
-                    <?php
-                    // Include config file
-                    require_once "config.php";
-                    
-                    // Attempt select query execution
-                    $sql = "SELECT * FROM players";
-                    if($result = mysqli_query($conn, $sql)){
-                        if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
-                                    echo "<tr>";
-                                        
-                                        echo "<th style=background-color:#848999;>ID</th>";
-                                        echo "<th style=background-color:#848999;>Name</th>";
-                                        echo "<th style=background-color:#848999;>Age</th>";
-                                        echo "<th style=background-color:#848999;>Position</th>";
-                                        echo "<th style=background-color:#848999;>Apps</th>";
-                                        echo "<th style=background-color:#848999;>Goals</th>";
-                                        echo "<th style=background-color:#848999;>Country</th>";
-                                        
-                                    echo "</tr>";
-                                echo "</thead>";
-                                echo "<tbody>";
-                                while($row = mysqli_fetch_array($result)){
-                                    echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['Name'] . "</td>";
-                                        echo "<td>" . $row['age'] . "</td>";
-                                        echo "<td>" . $row['Position'] . "</td>";
-                                        echo "<td>" . $row['apps'] . "</td>";
-                                        echo "<td>" . $row['goals'] . "</td>";
-                                        echo "<td>" . $row['Country'] . "</td>";
-
-
-                                        
-                                    echo "</tr>";
-                                }
-                                echo "</tbody>";                            
-                            echo "</table>";
-                            // Free result set
-                            mysqli_free_result($result);
-                        } else{
-                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
-                        }
-                    } else{
-                        echo "Oops! Something went wrong. Please try again later.";
->>>>>>> cedf9052e22a3aeea827e730342c4c18c1f689c0
-                    }
- 
-                    // Close connection
-                    mysqli_close($conn);
-                    ?>
-                </div>
-            </div>        
-        </div>
-    </div>
-</body>
-</html>
+             
+          ?>
+          </tbody>
+    
+      </table>
+  </body>
+  </html>
+  
