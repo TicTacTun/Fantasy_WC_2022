@@ -31,7 +31,7 @@
                 
                 <div  style="background-color: white; margin-left:20%;margin-right:20% ; margin-top:3%">
                     
-                    <table class="table table-striped">
+                    <table class="table table-bordered table-striped">
                         <thead >
                             <th>user-email</th>
                             <th>Connection Table</th>
