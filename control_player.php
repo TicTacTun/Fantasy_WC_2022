@@ -55,6 +55,14 @@
         background-color: #fff;
         color: #000;
         }
+        .main{
+        max-width: 1400px;
+        margin: auto;
+        padding-top: 1.5%;
+        text-decoration: none;
+        
+
+        }
                 
         
         
@@ -75,7 +83,7 @@
                 <div class="col-md-12">
                     <div class="main">    
                         <ul>
-                            <li ><a href="#">Admin Home</a></li>
+                            <li ><a href="adminhome.php">Admin Home</a></li>
                             <li><a href="usertest.php">Users</a></li>
                             <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
                             <li class="active"><a href="control_player.php">Players</a></li>
