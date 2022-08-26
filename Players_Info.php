@@ -36,6 +36,14 @@
         padding: 0;
         font-family:'myFirstFont';
         } 
+        th {
+        display: table-cell;
+        background-color:black;
+        
+        font-weight: bold;
+        text-align: left;
+        }
+        
           
         
         
@@ -128,7 +136,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
     
     <div class="wrapper">
         <div class="container-fluid">
@@ -143,55 +150,6 @@
                     <?php
                     // Include config file
                     require_once "config.php";
-=======
-
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <body style="margin: 50px;">
-    <h1>List of Players</h1>
-    <br>
-    <table class="table">
-        <thead>
-			<tr>
-                <th>ID</th>
-				<th>Name</th>
-				<th>Age</th>
-				<th>Position</th>
-				<th>Apps</th>
-				<th>Goals</th>
-                <th>Country</th>
-				
-			</tr>
-		</thead>
-
-        <tbody>
-            
-            <?php
-            
-			
-
-            // read all row from database table
-			$sql = "SELECT * FROM players";
-			$result = $conn->query($sql);
-
-            if (!$result) {
-				die("Invalid query: " . $conn->error);
-			}
-
-            // read data of each row
-			while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td>" . $row["id"] . "</td>
-                    <td>" . $row["Name"] . "</td>
-                    <td>" . $row["age"] . "</td>
-                    <td>" . $row["Position"] . "</td>
-                    <td>" . $row["apps"] . "</td>
-                    <td>" . $row["goals"] . "</td>
-                    <td>" . $row["Country"] . "</td>
-
-
-
->>>>>>> 042ac27377b50e326c27f5570b2d6837dd7d6fe8
                     
                     // Attempt select query execution
                     $sql = "SELECT * FROM players";
@@ -201,13 +159,13 @@
                                 echo "<thead>";
                                     echo "<tr>";
                                         
-                                        echo "<th>ID</th>";
-                                        echo "<th>Name</th>";
-                                        echo "<th>Age</th>";
-                                        echo "<th>Position</th>";
-                                        echo "<th>Apps</th>";
-                                        echo "<th>Goals</th>";
-                                        echo "<th>Country</th>";
+                                        echo "<th style=background-color:#848999;>ID</th>";
+                                        echo "<th style=background-color:#848999;>Name</th>";
+                                        echo "<th style=background-color:#848999;>Age</th>";
+                                        echo "<th style=background-color:#848999;>Position</th>";
+                                        echo "<th style=background-color:#848999;>Apps</th>";
+                                        echo "<th style=background-color:#848999;>Goals</th>";
+                                        echo "<th style=background-color:#848999;>Country</th>";
                                         
                                     echo "</tr>";
                                 echo "</thead>";
