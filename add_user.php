@@ -57,6 +57,10 @@ session_start();
                                 <input type="text" name="phoneno" class="form-control">
                             </div>
                             <div class="mb-3">
+                                <label>Password</label>
+                                <input type="password" name="pass" class="form-control">
+                            </div>
+                            <div class="mb-3">
                                 <button type="submit" name="save_user" class="btn btn-primary">Save User</button>
                             </div>
 
