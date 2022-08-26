@@ -21,6 +21,7 @@ header{
 ul{
   float: right;
   list-style-type: none;
+  margin-top: 25px;
   
 }
 ul li{
@@ -50,7 +51,7 @@ ul li.active a{
 .main{
   max-width: 1400px;
   margin: auto;
-  padding-top: 2.5%;
+  padding-top: 1.5%;
   
 }
 
