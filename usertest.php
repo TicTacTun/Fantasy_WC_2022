@@ -2,19 +2,28 @@
     session_start();
     require 'config.php';
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <title>User Handle</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fanadmin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <title>Document</title>
 </head>
 <body>
+    <header>
+        <div class="main">    
+            <ul>
+                <li><a href="adminhome.php">Admin Home</a></li>
+                <li><a href="usertest.php">Users</a></li>
+                <li class="active"><a href="fantasyadmin.php">Fantasy Team</a></li>
+                <li><a href="#">Players</a></li>
+                <li><a href="#">Points</a></li>
+            </ul>
+        </div>
   
     <div class="container mt-4">
 
