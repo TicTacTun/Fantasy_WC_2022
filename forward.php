@@ -6,10 +6,10 @@
         $result = $conn->query($sql);
 
         while ($row = $result->fetch_assoc()){
-            $id = $row['Player_ID']; 
+            $id = $row['id']; 
             $value = 0;  
             echo '<tr>                   
-                    <td>'.$row['Player_ID'].'</td>
+                    <td>'.$row['id'].'</td>
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
@@ -35,7 +35,7 @@
         $resultF = mysqli_query($conn,$sqlF);
 
         if (( mysqli_num_rows($resultF)<3)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){  
 
@@ -109,7 +109,7 @@
             <table class = 'content-table' style = 'background-color: aliceblue;font-family:"myFirstFont"'>
                 <thead class = 'p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Player_ID</th>
+                        <th >id</th>
                         <th>Name</th>
                         <th>Position</th>
                         <th>Country</th>

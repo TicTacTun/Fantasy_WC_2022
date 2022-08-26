@@ -11,7 +11,7 @@ if (isset($_GET['deleteid']) && $_GET['pos']){
     
     $name1 = $_SESSION['name'];
     
-    $sql = "DELETE FROM `$name1` WHERE Player_ID='$id'; ";
+    $sql = "DELETE FROM `$name1` WHERE id='$id'; ";
     $result = mysqli_query($conn,$sql);
     if ($result){
         header('location:team_create1.php');

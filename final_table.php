@@ -59,12 +59,12 @@
                         $result = $conn->query($sql11);
                         
                         while ($row = $result->fetch_assoc()){
-                            $id = $row['Player_ID'];
+                            $id = $row['id'];
                             $pos = $row['Position'];
                             $value = 0;
                             
                             echo '<tr>
-                                    <td>'.$row['Player_ID'].'</td>
+                                    <td>'.$row['id'].'</td>
                                     <td>'.$row['Name'].'</td>
                                     <td>'.$row['Position'].'</td>
                                     <td>'.$row['Country'].'</td>
