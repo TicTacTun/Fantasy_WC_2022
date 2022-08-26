@@ -31,7 +31,7 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="card" style="width:100%;">
+                <div class="card" style="margin-right: -500px; margin-top:15%">
                     <div class="card-header">
                         <h4>User Details
                             <a href="add_user.php" class="btn btn-primary float-end">Add Users</a>
