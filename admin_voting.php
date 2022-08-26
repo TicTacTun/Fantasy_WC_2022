@@ -20,15 +20,41 @@ session_start();
 </head>
 
 <body>
-    
-    <form action="">
-        <label for="fname">Team 1 :</label><br>
-        <input type="text" id="T1" name="T1" value=""><br>
-        <label for="lname">Team 2 :</label><br>
-        <input type="text" id="T2" name="T2" value=""><br><br>
-        <input type="submit" value="Submit">
-    </form> 
-  
+   
+    <style>
+        
+    </style>
+
+    <div class="container">
+        <div>Selected From Array</div>
+        
+        <div>
+            <form action=""></form>
+                <label for="match"></label>
+                <select name="cars" id="cars">
+                    <?php
+                        $sql = ' SELECT `Match no.`, `Home Team`, `facing h2h`, `Away Team` FROM `matches` ';
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc()){
+                            $matchNo = $row['Match no.'];
+                            $home = $row['Home Team'];
+                            $away = $row['Away Team'];
+                            $h2h =  $row['facing h2h'];
+                            echo "<option selected='selected' value=''>$matchNo.  $home $h2h $away</option>";
+            
+                        }
+                        
+                        
+                        
+                    ?>
+                </select>
+                <input type="submit" name="" id="" value = "submit">
+            </form>
+        </div>
+       
+    </div>
+</body>
+</html>
 </body>
 </html>
 

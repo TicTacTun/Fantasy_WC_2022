@@ -68,7 +68,7 @@
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><?= $items['Player_ID']; ?></td>
+                                                    <td><?= $items['id']; ?></td>
                                                     <td><?= $items['Name']; ?></td>
                                                     <td><?= $items['age']; ?></td>
                                                     <td><?= $items['Position']; ?></td>
@@ -134,7 +134,7 @@
             // read data of each row
 			while($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td>" . $row["Player_ID"] . "</td>
+                    <td>" . $row["id"] . "</td>
                     <td>" . $row["Name"] . "</td>
                     <td>" . $row["age"] . "</td>
                     <td>" . $row["Position"] . "</td>
