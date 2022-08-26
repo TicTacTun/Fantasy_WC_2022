@@ -12,7 +12,7 @@
     <title>Players Information</title>
     <style>
     body {
-        background-image: url("8.png");
+        background-image: url("10.jpg");
         background-repeat: no-repeat, repeat;
         
         height: cover;
@@ -28,7 +28,7 @@
         }
         table { background-color:#fff;}
         @font-face {
-        font-family: myFirstFont;
+        font-family: 'myFirstFont';
         src: url(Qatar2022Arabic-Bold.ttf);
         }
         *{
@@ -80,7 +80,7 @@
                 <div class="card mt-4">
                     <div class="card-body">
                         <table class="table table-bordered">
-                            <thead>
+                            <thead >
                                 <tr>
                                     <th>ID</th>
 				                    <th>Name</th>
@@ -156,16 +156,16 @@
                     if($result = mysqli_query($conn, $sql)){
                         if(mysqli_num_rows($result) > 0){
                             echo '<table class="table table-bordered table-striped">';
-                                echo "<thead>";
+                                echo "<thead >";
                                     echo "<tr>";
                                         
-                                        echo "<th style=background-color:#848999;>ID</th>";
-                                        echo "<th style=background-color:#848999;>Name</th>";
-                                        echo "<th style=background-color:#848999;>Age</th>";
-                                        echo "<th style=background-color:#848999;>Position</th>";
-                                        echo "<th style=background-color:#848999;>Apps</th>";
-                                        echo "<th style=background-color:#848999;>Goals</th>";
-                                        echo "<th style=background-color:#848999;>Country</th>";
+                                        echo "<th style='background-color:#500808; color: #fff;'>ID</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Name</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Age</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Position</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Apps</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Goals</th>";
+                                        echo "<th style='background-color:#500808;color: #fff;'>Country</th>";
                                         
                                     echo "</tr>";
                                 echo "</thead>";

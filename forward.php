@@ -7,14 +7,14 @@
 
         while ($row = $result->fetch_assoc()){
             $id = $row['id']; 
-            $value = 0;  
+            $points =$row['points'] ;  
             echo '<tr>                   
                     <td>'.$row['id'].'</td>
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'  .$value .'</td> 
-                    <td>'.$value .'</td>                                               
+                    <td>'.$row['points'].'</td> 
+                    <td>'.$row['points'].'</td>                                               
                     <td>                      
 
                         <button class="btn btn-success btn-sm" name = "button0" onclick="setTimeout(myFunction, 2000)" >                            
@@ -115,6 +115,7 @@
                         <th>Country</th>
                         <th>Points</th>
                         <th>Ranking</th>
+                        
                                                                             
                         <th>Select</th>
                     </tr>

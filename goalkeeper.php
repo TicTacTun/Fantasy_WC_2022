@@ -14,8 +14,8 @@
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'  .$value .'</td> 
-                    <td>'.$value .'</td>                               
+                    <td>'  .$row['points'].'</td> 
+                    <td>'.$row['points'].'</td>                               
                 
                     <td>
                         
@@ -112,7 +112,7 @@
                         <th >Country</th>
                         <th>Points</th>
                         <th>Ranking</th>
-                                                                           
+                                                                        
                         <th>Select</th>
                     </tr>
                 </thead>
