@@ -31,13 +31,13 @@
 
         <div class="row">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card" style="width:100%;">
                     <div class="card-header">
                         <h4>User Details
                             <a href="add_user.php" class="btn btn-primary float-end">Add Users</a>
                         </h4>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" >
 
                         <table class="table table-bordered table-striped">
                             <thead>

@@ -17,7 +17,40 @@
             width: 120px;
         }
         table { background-color: aliceblue; }
-        
+        header{
+
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
+
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        }
+        ul{
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
+
+        }
+        ul li{
+        display: inline-block;
+        }
+        ul li a{
+        text-decoration: none;
+        color: #fff;
+        padding: 5px 20px;
+        border: 3px solid transparent;
+        transition: 0.6s ease;
+
+        }
+        ul li a:hover{
+        background-color: #fff;
+        color: #000;
+        }
+        ul li.active a{
+        background-color: #fff;
+        color: #000;
+        }
+                
         
         
         
