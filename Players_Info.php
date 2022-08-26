@@ -136,63 +136,71 @@
             </div>
         </div>
     </div>
-
     
-    
-                           
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <body style="margin: 50px;">
-    <h1>List of Players</h1>
-    <br>
-    <table class="table">
-        <thead>
-			<tr>
-                <th>ID</th>
-				<th>Name</th>
-				<th>Age</th>
-				<th>Position</th>
-				<th>Apps</th>
-				<th>Goals</th>
-                <th>Country</th>
-				
-			</tr>
-		</thead>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row" >
+                
+                <div class="col-md-12">
+                    <div class="mt-5 mb-3 clearfix">
+                        
+                        <h2 class="pull-left"><h2 style="color:#fff" >List of Players</h2>
+                        
+                    </div>
+                    <?php
+                    // Include config file
+                    require_once "config.php";
+                    
+                    // Attempt select query execution
+                    $sql = "SELECT * FROM players";
+                    if($result = mysqli_query($conn, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        
+                                        echo "<th style=background-color:#848999;>ID</th>";
+                                        echo "<th style=background-color:#848999;>Name</th>";
+                                        echo "<th style=background-color:#848999;>Age</th>";
+                                        echo "<th style=background-color:#848999;>Position</th>";
+                                        echo "<th style=background-color:#848999;>Apps</th>";
+                                        echo "<th style=background-color:#848999;>Goals</th>";
+                                        echo "<th style=background-color:#848999;>Country</th>";
+                                        
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['Name'] . "</td>";
+                                        echo "<td>" . $row['age'] . "</td>";
+                                        echo "<td>" . $row['Position'] . "</td>";
+                                        echo "<td>" . $row['apps'] . "</td>";
+                                        echo "<td>" . $row['goals'] . "</td>";
+                                        echo "<td>" . $row['Country'] . "</td>";
 
-        <tbody>
-            
-            <?php
-            
-			
 
-            // read all row from database table
-			$sql = "SELECT * FROM players";
-			$result = $conn->query($sql);
-
-            if (!$result) {
-				die("Invalid query: " . $conn->error);
-			}
-
-            // read data of each row
-			while($row = $result->fetch_assoc()) {
-                echo "<tr>
-                    <td>" . $row["id"] . "</td>
-                    <td>" . $row["Name"] . "</td>
-                    <td>" . $row["age"] . "</td>
-                    <td>" . $row["Position"] . "</td>
-                    <td>" . $row["apps"] . "</td>
-                    <td>" . $row["goals"] . "</td>
-                    <td>" . $row["Country"] . "</td>
-
-                    </tr>";
-
-          }
-    
-             
-          ?>
-          </tbody>
-    
-      </table>
-  </body>
-  </html>
-  
+                                        
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+ 
+                    // Close connection
+                    mysqli_close($conn);
+                    ?>
+                </div>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>
