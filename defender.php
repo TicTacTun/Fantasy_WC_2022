@@ -34,25 +34,24 @@
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
-            try{
-                $result = mysqli_query($conn,$sql);
+            $result = mysqli_query($conn,$sql);
+            if ($result ){
                 
-                if ($result ){                
-                    header('location:defender.php');
-            }}
-            catch (Exception $e){
-                    echo '<script>
+                header('location:defender.php');
+            }
+            else{
+                echo '<script>
                     setTimeout(function() {
                         swal({
-                            title: "Cant add same player!",
+                            title: "Cant add same player",
                             
                             type: "warning",
                         }, function() {
-                        window.location = "defender.php";
+                            window.location.href= "defender.php";
                         });
                     }, 1000);
-                </script>';}
-                        
+            </script>';
+            }
         
         }
         else{
