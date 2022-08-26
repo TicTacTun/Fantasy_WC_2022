@@ -25,11 +25,11 @@
         <div class='bg'>
             <div class='signupFrm'>
                 
-                <h2 style='color:aliceblue;font-family:"myFirstFont"; ; font-weight: 200px;margin-bottom:0.5%;width:30%;margin-left:10%;margin-right:50% ; margin-top:10%'>
-                        Remove User Fantasy Team
+                <h2 style='color:aliceblue;font-family:"myFirstFont"; ; font-weight: 200px;margin-bottom:0.5%;width:30%;margin-left:38%;margin-right:20% ; margin-top:7%'>
+                        Remove User's Fantasy Team
                 </h2>
                 
-                <div  style="background-color: white; margin-left:10%;margin-right:50% ; margin-top:3%">
+                <div  style="background-color: white; margin-left:20%;margin-right:20% ; margin-top:3%">
                     
                     <table class="table table-striped">
                         <thead >

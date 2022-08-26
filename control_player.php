@@ -9,6 +9,10 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
+        @font-face {
+        font-family: myFirstFont;
+        src: url(Qatar2022Arabic-Bold.ttf);
+        }
         .wrapper{
             width: 1000px;
             margin: 0 auto;
@@ -18,12 +22,13 @@
         }
         table { background-color: aliceblue; }
         body{
-
+        font-family:'myFirstFont';
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
 
-        height: 100vh;
+        height: cover;
         background-size: cover;
         background-position: center;
+
         }
         ul{
         float: right;
@@ -77,9 +82,9 @@
                             <li><a href="#">Points</a></li>
                         </ul>
                     </div>
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Players Info</h2>
-                        <a href="insert_player.php" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Add New Player</a>
+                    <div class="mt-5 mb-3 clearfix" style="margin-top:7% ;">
+                        <h2 class="pull-left" style="color:#fff; margin-top:5%;" >Players Info</h2>
+                        <a href="insert_player.php" class="btn btn-success pull-right" style="margin-top:7%;" ><i class="fa fa-plus"></i> Add New Player</a>
                     </div>
                     <?php
                     // Include config file
