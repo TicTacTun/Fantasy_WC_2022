@@ -14,9 +14,9 @@
     <header>
         <div class="main">    
             <ul>
-                <li class="active"><a href="adminhome.php">Admin Home</a></li>
-                <li><a href="userhandle.php">Users</a></li>
-                <li><a href="fantasyHandle.php">Fantasy Teams</a></li>
+                <li><a href="adminhome.php">Admin Home</a></li>
+                <li><a href="usertest.php">Users</a></li>
+                <li class="active"><a href="fantasyadmin.php">Fantasy Team</a></li>
                 <li><a href="#">Players</a></li>
                 <li><a href="#">Points</a></li>
             </ul>
@@ -26,7 +26,7 @@
             <div class='signupFrm'>
                 
                 <h2 style='color:aliceblue;font-family:"myFirstFont"; ; font-weight: 200px;margin-bottom:0.5%;width:30%;margin-left:10%;margin-right:50% ; margin-top:10%'>
-                        user connection with table
+                        Remove User Fantasy Team
                 </h2>
                 
                 <div  style="background-color: white; margin-left:10%;margin-right:50% ; margin-top:3%">
