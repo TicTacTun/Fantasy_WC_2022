@@ -18,8 +18,8 @@
         <div class="main">    
             <ul>
                 <li><a href="adminhome.php">Admin Home</a></li>
-                <li><a href="usertest.php">Users</a></li>
-                <li class="active"><a href="fantasyadmin.php">Fantasy Team</a></li>
+                <li class="active"><a href="usertest.php">Users</a></li>
+                <li ><a href="fantasyadmin.php">Fantasy Team</a></li>
                 <li><a href="#">Players</a></li>
                 <li><a href="#">Points</a></li>
             </ul>
