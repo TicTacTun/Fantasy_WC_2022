@@ -34,11 +34,11 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='GoalKeeper'";
+        $sqlF = "Select * FROM `$name` where Position='GoalKeeper'";
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<1)) {
-            $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
                 
@@ -53,7 +53,7 @@
             echo    '<script>
                         setTimeout(function() {
                             swal({
-                                title: "All 4 out of 4 Member has been added",
+                                title: "All 1 out of 1 Member has been added",
                                 text :" You cant add more member! ",
                                 type: "success",
                             }, function() {
@@ -87,22 +87,23 @@
 
 <body>
     
-    <div class='bg'>
+    <div class='bg' style="height:135% ;">
         <div>
             <header>Team Creation</header>
             <
         </div> 
         
         <div class="column4">
-            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Goalkeeper(
+            <h2 style='font-family:"myFirstFont"; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Goalkeeper(
                 
                 <?php 
                     $nam1 = $_SESSION['name'];
-                    $sqlF = "Select * FROM $nam1 where Position='GoalKeeper'"; 
-                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                    $sqlF = "Select * FROM `$nam1` where Position='GoalKeeper'"; 
+                    $resultF = mysqli_query($conn,$sqlF);
+                    echo mysqli_num_rows($resultF);
                 ?>
-                out of 1 )</h2></h2>
-            <table class = 'content-table' style="background-color: aliceblue;">
+                out of 1 )</h2>
+            <table class = 'content-table' style="background-color: aliceblue;font-family:'myFirstFont';">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Player ID</th>
@@ -118,7 +119,7 @@
                 <tbody>
 
                     <?php           
-                        $sql = "Select * FROM players where Position='GoalKeeper'";
+                        $sql = "Select * FROM `players` where Position='GoalKeeper'";
                         writeMsgt($conn,$sql);
                     ?>
                     
@@ -128,12 +129,12 @@
         </div>
 
         <div>
-            <button class="btn btn-success btn-lg" onclick="location.href='team_create1.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 60%; margin-bottom:5%;background-color:#500808;">
+            <button class="btn btn-success btn-lg" onclick="location.href='team_create1.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 60%; margin-bottom:5%;background-color:#500808;">
                 NEXT
             </button>
         </div>
         <div >
-            <button class="btn btn-success btn-lg" onclick="location.href='defender.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
+            <button class="btn btn-success btn-lg" onclick="location.href='defender.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
                 Previous
             </button>
         </div>     

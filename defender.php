@@ -29,18 +29,28 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='defender'";
+        $sqlF = "Select * FROM `$name` where Position='defender'";
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
-            $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){
                 
                 header('location:defender.php');
             }
             else{
-                mysqli_error($conn);
+                echo '<script>
+                    setTimeout(function() {
+                        swal({
+                            title: "Cant add same player",
+                            
+                            type: "warning",
+                        }, function() {
+                            window.location.href= "defender.php";
+                        });
+                    }, 1000);
+            </script>';
             }
         
         }
@@ -79,7 +89,7 @@
 
 <body>
     
-    <div class='bg'>
+    <div class='bg'style="height:133% ;">
         <div>
             <header>Team Creation</header>
             
@@ -87,18 +97,19 @@
         
         
         <div class="column3">
-            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Defender(
+            <h2 style='font-family:"myFirstFont"; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Defender(
                 
                 <?php 
                     $nam1 = $_SESSION['name'];
-                    $sqlF = "Select * FROM $nam1 where Position='Defender'"; 
-                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                    $sqlF = "Select * FROM `$nam1` where Position='Defender'"; 
+                    $resultF = mysqli_query($conn,$sqlF);
+                    echo mysqli_num_rows($resultF);
                 ?>
-            out of 4 )</h2>
+            out of 4  )</h2>
             
         
             </h2>
-            <table class = 'content-table' style="background-color: aliceblue;">
+            <table class = 'content-table' style="background-color: aliceblue;font-family:'myFirstFont'">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Player ID</th>
@@ -114,7 +125,7 @@
                 <tbody>
 
                     <?php           
-                        $sql = "Select * FROM players where Position='Defender'";
+                        $sql = "Select * FROM `players` where Position='Defender'";
                         writeMsgt($conn,$sql);
                     ?>
                     
@@ -124,12 +135,12 @@
         </div>
 
         <div>
-            <button class="btn btn-success btn-lg" onclick="location.href='goalkeeper.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 60%; margin-bottom:5% ;background-color:#500808;">
+            <button class="btn btn-success btn-lg" onclick="location.href='goalkeeper.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 60%; margin-bottom:5% ;background-color:#500808;">
                 NEXT
             </button>
         </div>
         <div >
-        <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
+        <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 28%;margin-top:-13.5%; background-color:#500808;" >
                 Previous
             </button>
         </div>    

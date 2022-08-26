@@ -22,14 +22,14 @@
 
 <body>
     
-    <div class='bg'>
+    <div class='bg' style="height: 150%;">
         <div>
             <header>Here is Your Fantasy Team</header> 
         </div> 
         
         <div class="column4" >
-            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Team <?php echo $_SESSION['name']?> </h2>
-            <table id = 'team 'class = 'table table-striped'>
+            <h2 style='font-family:"myFirstFont"; background-color:#500808; font-weight: 200px;padding: 10px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Team <?php echo $_SESSION['name']?> </h2>
+            <table id = 'team 'class = 'table table-striped' style="font-family:'myFirstFont'">
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Player ID</th>
@@ -45,7 +45,7 @@
                 <?php
                     
                     $name11 = $_SESSION['name'];
-                    $sql11 = "SELECT * FROM $name11 ";
+                    $sql11 = "SELECT * FROM `$name11` ";
                     
                     $result = $conn->query($sql11);
                     while ($row = $result->fetch_assoc()){
@@ -79,9 +79,15 @@
                 
             </table>
         </div>
-        <button class="btn btn-success btn-lg" onclick="window.location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;"
+        <button class="btn btn-success btn-lg" onclick="window.location.href='final_table.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45%;"
              >
-            Are You Sure about to Submit?
+            Submit
+        </button>
+        <br>
+        <br>
+        <br>
+        <button class="btn btn-success btn-lg" onclick="window.location.href='goalkeeper.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45% ;background-color:#500808;">
+            Go previous
         </button>   
     
     </div> 
@@ -93,6 +99,6 @@
         showConfirmButton: false,
         timer: 1500
     })
-</script>"
+</script>
 </body>
 </html>

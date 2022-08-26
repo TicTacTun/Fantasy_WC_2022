@@ -32,12 +32,12 @@
 
                     
 
-                    <h2>Enter Your Fantasy Team Name</h2>
-                    <input   type="text"  name="name"  placeholder="Team Name">
+                    <h2 style="color:#500808;font-family:'myFirstFont'">Enter Your Fantasy Team Name</h2>
+                    <input   type="text"  name="name"  placeholder="Team Name without space...">
 
                                 
                     <br>
-                    <input type="submit" style="background-color:#500808;" name= "submit" value="SUBMIT">
+                    <input type="submit" style="background-color:#500808; font-family:'myFirstFont'" name= "submit" value="SUBMIT">
                 </form>
             </div>
         </div>   

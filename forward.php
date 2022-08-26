@@ -17,7 +17,7 @@
                     <td>'.$value .'</td>                                               
                     <td>                      
 
-                        <button class="btn btn-success btn-sm" name = "button0"  >                            
+                        <button class="btn btn-success btn-sm" name = "button0" onclick="setTimeout(myFunction, 2000)" >                            
                             <a href = "forward.php?addid='.$id.'" class="text-light" style="font-weight:bold""  >     
                                 Add Player
                             </a>
@@ -30,19 +30,30 @@
     if (isset($_GET['addid'])){
         $id = $_GET['addid'];
         $name = $_SESSION['name'];
-        $sqlF = "Select * FROM $name where Position='Forward'";
+        $sqlF = "Select * FROM `$name` where Position='Forward'";
         
         $resultF = mysqli_query($conn,$sqlF);
 
         if (( mysqli_num_rows($resultF)<3)) {
-            $sql = "INSERT INTO  $name (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM players where Player_ID =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,Player_ID) SELECT Name, Position,Country,Player_ID FROM `players` where Player_ID =$id;";
             $result = mysqli_query($conn,$sql);
             if ($result ){  
 
                 header('location:forward.php');
             }
             else{
-                mysqli_error($conn);
+                echo '<script>
+                    setTimeout(function() {
+                        swal({
+                            title: "Cant add same player",
+                            
+                            type: "warning",
+                        }, function() {
+                            window.location.href= "forward.php";
+                        });
+                    }, 1000);
+            </script>';
+                //mysqli_error($conn);
             }
         
         }
@@ -80,20 +91,22 @@
 </head>
 
 <body>    
-    <div class='bg'>
+    <div class='bg' style="height:125% ;">
         <div>
             <header>Team Creation</header>            
         </div>        
-        <div class="column1" >                
-
-            <h2 style='font-family: "Times New Roman", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Forward Players (
+        <div class="column1" > 
+            <h2 style='font-family:"myFirstFont"; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'>Forward Players (
                 <?php 
                     $nam1 = $_SESSION['name'];
-                    $sqlF = "Select * FROM $nam1 where Position='Forward'"; 
-                    $resultF = mysqli_query($conn,$sqlF); echo mysqli_num_rows($resultF)
+                    $sqlF = "Select * FROM `$nam1` where Position='Forward'"; 
+                    $result = mysqli_query($conn,$sqlF); 
+                    echo mysqli_num_rows($result);
+
+                    
                 ?>
             out of 3 )</h2>                
-            <table class = 'content-table' style = 'background-color: aliceblue;'>
+            <table class = 'content-table' style = 'background-color: aliceblue;font-family:"myFirstFont"'>
                 <thead class = 'p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Player_ID</th>
@@ -114,7 +127,7 @@
             </table>
                                       
         </div>
-        <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family: sans-serif; font: weight 80%; margin-left: 45%;background-color:#500808;">
+        <button class="btn btn-success btn-lg" onclick="location.href='mid_fielder.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; margin-left: 45%;background-color:#500808;">
             NEXT
         </button>                    
 

@@ -12,7 +12,7 @@
             </div>    
             <ul>
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Players</a></li>
+                <li><a href="Players_Info.php">Players</a></li>
                 <li><a href="#">Teams</a></li>
                 <li><a href="#">Fixtures</a></li>
                 <li><a href="#">Leaderboard</a></li>
@@ -23,8 +23,30 @@
             <h1>Fantasy WC 2022</h1>
         </div>
         <div class="button">
-            <a href="team_name_enter.php" class="btn">Fantasy Team</a>
+            <?php
+                require_once 'config.php';
+                session_start();
+                $uname = $_SESSION['username'];
+                $email = $_SESSION['email-log'];
+                
+                $sql = "SELECT `status` FROM `users` WHERE username='$uname'";
+                $result = $conn->query($sql);
+                
+                while ($row = $result->fetch_assoc()){
+                    $status = $row['status'];
+                    if ( $status!='submitted'){
+                        echo '<a href="team_name_enter.php" class="btn">Fantasy Team</a>';
+                    
+                    }
+                    else if ( $status=='submitted') {
+                        echo '<a href="final_table.php" class="btn">Fantasy Team</a>';
+                    }
+                }
+            ?>
+            
+                        
             <a href="#" class="btn">Prediction</a>
+        </div>
     </header>
 </body>
 </html>

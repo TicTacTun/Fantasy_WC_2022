@@ -1,13 +1,17 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(Qatar2022Arabic-Bold.ttf);
+}
 *{
     margin: 0;
     padding: 0;
-    font-family: Century Gothic;
+    font-family:'myFirstFont';
 }
 header{
 
     background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(4.JPG);
 
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(7.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(2.jpg);
 
     height: 100vh;
     background-size: cover;
@@ -44,6 +48,7 @@ ul li.active a{
 .main{
     max-width: 1400px;
     margin: auto;
+    
 }
 .title{
     position: absolute;
