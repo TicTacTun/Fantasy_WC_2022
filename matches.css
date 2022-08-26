@@ -1,18 +1,21 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto');
-
+@font-face {
+    font-family: myFirstFont;
+    src: url(Qatar2022Arabic-Bold.ttf);
+  }
 *{
     margin: 0;
     padding: 0;
     outline: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family:'myFirstFont';
     text-align: center;
 }
 
 body{
     height: 100vh;
-    background-image: url(wclogo22.jpg);
+    background-image: url(bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,7 +28,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
-    background-color:hsl(349, 39%, 27%);
+    background-color:hsl(340, 1%, 45%);
     text-align: center;
     border-radius: 4px;
     text-transform: uppercase;
