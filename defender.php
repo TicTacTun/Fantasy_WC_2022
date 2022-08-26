@@ -12,8 +12,8 @@
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'  .$value .'</td> 
-                    <td>'.$value .'</td>                                                 
+                    <td>'  .$row['points'].'</td> 
+                    <td>'.$row['points'].'</td>                                                 
                     <td>                        
                         <button class="btn btn-success btn-sm" name = "button0">
                             <a href = "defender.php?addid='.$id.'" class="text-light" style="font-weight:bold">     
@@ -34,12 +34,14 @@
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
-            $result = mysqli_query($conn,$sql);
-            if ($result ){
-                
-                header('location:defender.php');
-            }
-            else{
+            try{
+
+                $result = mysqli_query($conn,$sql);
+                if ($result ){  
+
+                    header('location:defender.php');
+            }}
+            catch (Exception $e ){
                 echo '<script>
                     setTimeout(function() {
                         swal({
@@ -118,6 +120,7 @@
                         <th >Country</th>
                         <th>Points</th>
                         <th>Ranking</th>
+                        
                                                                            
                         <th>Select</th>
                     </tr>

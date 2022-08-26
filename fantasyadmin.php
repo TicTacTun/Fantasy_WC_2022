@@ -69,11 +69,11 @@
                                 if(isset($_GET['email'])){
                                     $email1 = $_GET['email'];
                                     $table1 = $_GET['Contab'];
-                                    echo $table;
+                                    
                                     $sql = "DELETE FROM `user-table-conn` WHERE email='$email1'; ";
                                     $result = mysqli_query($conn,$sql);
 
-                                    $sql2 = " DROP TABLE `$table1`";
+                                    $sql2 = "DROP TABLE `$table1`";
                                     $result2 = mysqli_query($conn,$sql2);
 
                                     $sql3 = "UPDATE `users` SET status ='unsubmitted'  WHERE email = '$email1';";

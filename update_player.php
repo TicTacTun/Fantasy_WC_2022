@@ -3,8 +3,8 @@
 require_once "config.php";
  
 // Define variables and initialize with empty values
-$country = $position = $name = $age = $apps = $goals = "";
-$country_err = $position_err = $name_err = $age_err = $apps_err = $goals_err = "";
+$country = $position = $name = $age = $apps = $goals= $points = "";
+$country_err = $position_err = $name_err = $age_err = $apps_err = $goals_err= $points_err = "";
  
 // Processing form data when form is submitted
 if(isset($_POST["id"]) && !empty($_POST["id"])){
@@ -66,17 +66,29 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     else{
         $goals = $input_goals;
     }
+    $input_points = trim($_POST["points"]);
+    if(empty($input_points)){
+        $address_points = "Please enter points numbers.";     
+    }
+    elseif(!ctype_digit($input_points)){
+        $points_err = "Please enter a positive integer value.";
+    }
+    else{
+        $points = $input_points;
+    }
+    
     
     // Check input errors before inserting in database
-    if(empty($country_err) && empty($position_err) && empty($name_err) && empty($age_err) && empty($apps_err) && empty($goals_err)){
+    if(empty($points_err) && empty($country_err) && empty($position_err) && empty($name_err) && empty($age_err) && empty($apps_err) && empty($goals_err)){
         // Prepare an update statement
-        $sql = "UPDATE players SET Country=?,Position=?,Name=?,age=?,apps=?,goals=? WHERE id=?";
+        $sql = "UPDATE players SET Country=?,Position=?,Name=?,age=?,apps=?,goals=?,points=? WHERE id=?";
          
         if($stmt1 = mysqli_prepare($conn, $sql)){
             // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt1, "sssiiii", $param_country, $param_position, $param_name, $param_age, $param_apps, $param_goals, $param_id);
+            mysqli_stmt_bind_param($stmt1, "sssiiiii", $param_country, $param_position, $param_name, $param_age, $param_apps, $param_goals, $param_id,$param_points);
             
             // Set parameters
+            $param_points  = $points;
             $param_country = $country;
             $param_id = $id;
             $param_position = $position;
@@ -212,6 +224,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <label>Country</label>
                             <input type="text" name="Country" class="form-control <?php echo (!empty($country_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $country; ?>">
                             <span class="invalid-feedback"><?php echo $country_err;?></span>
+                        </div>
+                        <div class="form-group">
+                            <label>Points</label>
+                            <input type="text" name="points" class="form-control <?php echo (!empty($points_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $points; ?>">
+                            <span class="invalid-feedback"><?php echo $points_err;?></span>
                         </div>
 
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
