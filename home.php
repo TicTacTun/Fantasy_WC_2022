@@ -14,6 +14,7 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="Players_Info.php">Players</a></li>
                 <li><a href="match.php">Fixtures</a></li>
+                <li><a href="leaderboard.php">Leaderboard</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
         </div>

@@ -38,11 +38,14 @@
                             $conttable = mysqli_query($conn,$query);
                             while ($row = $conttable->fetch_assoc()){
                                 $table_name = $row['Contab'];
-                                $sqlsum = "SELECT $table_name.id, SUM(players.points)  as total FROM $table_name INNER JOIN players ON $table_name.id = players.id;";
+                                $sqlsum = "SELECT `$table_name`.id, SUM(players.points)  as total FROM `$table_name` INNER JOIN `players` ON `$table_name`.id = players.id;";
                                 $total_result = mysqli_query($conn,$sqlsum);
                                 while ($row = $total_result->fetch_assoc()){
                                     $sad = $row["total"];
                                     echo $sad ;
+                                    $sql2 = "UPDATE `userconn` SET `upoints`=$sad WHERE email='$email'";
+                                    $up_tab_result = mysqli_query($conn,$sql2);
+                                    
                                 }
                             }
 
@@ -82,8 +85,8 @@
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];
                     
-                        $sql11 = "SELECT $table_name.id, players.Name,players.goals,$table_name.Country ,players.Position,players.goalp,players.assistp,players.cleanp,players.points FROM $table_name
-                        INNER JOIN players ON $table_name.id = players.id;";
+                        $sql11 = "SELECT `$table_name`.id, `players`.Name,`players`.goals,`$table_name`.Country ,players.Position,players.goalp,players.assistp,players.cleanp,players.points FROM `$table_name`
+                        INNER JOIN `players` ON `$table_name`.id = players.id;";
                         $result = $conn->query($sql11);
                         
                         while ($row = $result->fetch_assoc()){
