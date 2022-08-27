@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
    
     $input_home = trim($_POST["home"]);
     if(empty($input_home)){
-        $home_err = "Please enter a home name.";     
+        $home_err = "Please enter a valid value.";     
     } else{
         $home = $input_home;
     }
@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $input_match = trim($_POST["match"]);
     
     if(empty($input_match)){
-        $match_err = "Please enter an unique id number.";     
+        $match_err = "Please enter a valid value.";     
     }
     
     
@@ -33,14 +33,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $input_faces = trim($_POST["faces"]);
     if(empty($input_faces)){
-        $faces_err = "Please enter position.";     
+        $faces_err = "Please enter a valid value.";     
     } else{
         $faces = $input_faces;
     }
 
     $input_away = trim($_POST["away"]);
     if(empty($input_away)){
-        $away_err = "Please enter a name.";     
+        $away_err = "Please enter a valid value.";     
     }
      else{
         $away = $input_away;
@@ -48,7 +48,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $input_dates = trim($_POST["dates"]);
     if(empty($input_dates)){
-        $dates_err = "Please enter an age.";     
+        $dates_err = "Please enter a valid value.";     
     } 
     
     else{
@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $input_kick = trim($_POST["kick"]);
     if(empty($input_kick)){
-        $kick_err = "Please enter apperance number.";     
+        $kick_err = "Please enter a valid value.";     
     } 
     
     
@@ -67,7 +67,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $input_stadium = trim($_POST["stadium"]);
     if(empty($input_stadium)){
-        $address_stadium = "Please enter goal numbers.";     
+        $address_stadium = "Please enter a valid value.";     
     }
     
     

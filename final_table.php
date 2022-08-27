@@ -56,22 +56,23 @@
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];
                     
-                        $sql11 = "SELECT * FROM `$table_name` ";
+                        $sql11 = "SELECT $table_name.id, players.Name,players.goals,$table_name.Country ,players.Position,players.goalp,players.assistp,players.cleanp,players.points FROM $table_name
+                        INNER JOIN players ON $table_name.id = players.id;";
                         $result = $conn->query($sql11);
                         
                         while ($row = $result->fetch_assoc()){
                             $id = $row['id'];
-                            $pos = $row['position'];
+                            $pos = $row['Position'];
                             $value = $row['points'];
                             
                             echo '<tr>
                                 <td>'.$row['id'].'</td>
                                 <td>'.$row['Name'].'</td>
-                                <td>'.$row['position'].'</td>
+                                <td>'.$row['Position'].'</td>
                                 <td>'.$row['Country'].'</td>
                                 <td>'.$row['goalp'].'</td>
                                 <td>'.$row['assistp'].'</td>
-                                <td>'.$row['cleanP'].'</td>
+                                <td>'.$row['cleanp'].'</td>
                                                                 
                                 
                                     
@@ -91,5 +92,29 @@
     
     </div> 
 
+</body>
+<body>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+        <div class="card-header bg">
+            <h1>Calculate Points</h1>
+        </div>
+        <div class="card-body">
+          
+        
+            <?php
+            $results1 = mysqli_query($conn, "SELECT sum(points) FROM `$table_name`")or die(mysqli_error($conn));
+            while($rows = mysqli_fetch_array($results1)){?>
+            Total Points: <?php echo $rows['sum(points)']; ?>
+            <?php
+            }
+            ?>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
