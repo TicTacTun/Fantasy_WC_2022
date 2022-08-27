@@ -121,6 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Insert Fixtures</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="matches.css">
     <style>
         .wrapper{
@@ -130,56 +131,56 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
     </style>
 </head>
-<body style="background-color:powderblue;">
-<body>
-    <div class="wrapper">
+<body style="background-image:url(8.png); height:cover;">
+
+    <div class="wrapper" style=" height:150%;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Insert New Fixtures</h2>
+                    <h2 style="color:aliceblue;" class="mt-5">Insert New Fixtures</h2>
                     <p></p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                        
                         
 
                         <div class="form-group">
-                            <label>Match no.</label>
+                            <label style="color:aliceblue;">Match no.</label>
                             <input type="text" name="match" class="form-control <?php echo (!empty($match_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $match; ?>">
                             <span class="invalid-feedback"><?php echo $match_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Home</label>
+                            <label style="color:aliceblue;">Home</label>
                             <input type="text" name="home" class="form-control <?php echo (!empty($home_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $home; ?>">
                             <span class="invalid-feedback"><?php echo $home_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>faces</label>
+                            <label style="color:aliceblue;">faces</label>
                             <input type="text" name="faces" class="form-control <?php echo (!empty($faces_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $faces; ?>">
                             <span class="invalid-feedback"><?php echo $faces_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>away</label>
+                            <label style="color:aliceblue;">away</label>
                             <input type="text" name="away" class="form-control <?php echo (!empty($away_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $away; ?>">
                             <span class="invalid-feedback"><?php echo $away_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Date</label>
+                            <label style="color:aliceblue;">Date</label>
                             <input type="text" name="dates" class="form-control <?php echo (!empty($dates_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $dates; ?>">
                             <span class="invalid-feedback"><?php echo $dates_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Kick-Off</label>
+                            <label style="color:aliceblue;" >Kick-Off</label>
                             <input type="text" name="kick" class="form-control <?php echo (!empty($kick_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $kick; ?>">
                             <span class="invalid-feedback"><?php echo $kick_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Stadium</label>
+                            <label style="color:aliceblue;" >Stadium</label>
                             <input type="text" name="stadium" class="form-control <?php echo (!empty($stadium_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $stadium; ?>">
                             <span class="invalid-feedback"><?php echo $stadium_err;?></span>
                         </div>

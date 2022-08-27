@@ -6,7 +6,7 @@
     src: url(Qatar2022Arabic-Bold.ttf);
   }
 *{
-    margin: 0;
+    
     padding: 0;
     outline: 0;
     font-family:'myFirstFont';
@@ -14,7 +14,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 200%;
     background-image: url(10.jpg);
     background-size: cover;
     background-repeat: no-repeat;

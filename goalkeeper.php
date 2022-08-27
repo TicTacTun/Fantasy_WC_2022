@@ -8,14 +8,15 @@
         $result = $conn->query($sql);
         while ($row = $result->fetch_assoc()){
             $id = $row['id'];
-            $value = 0;  
+              
             echo '<tr>                   
                     <td>'.$row['id'].'</td>
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'  .$row['points'].'</td> 
-                    <td>'.$row['points'].'</td>                               
+                    <td>'.$row['goalp'].'</td>
+                    <td>'.$row['assistp'].'</td>
+                    <td>'.$row['cleanp'].'</td>                             
                 
                     <td>
                         
@@ -38,7 +39,7 @@
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<1)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,id,points) SELECT Name, Position,Country,id,points FROM `players` where id =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,id,GoalP,AssistP,CleanP,Points) SELECT Name, Position,Country,id,goalp,assistp,cleanp,Points FROM `players` where id =$id;";
             try{
 
                 $result = mysqli_query($conn,$sql);
@@ -115,15 +116,16 @@
                     echo mysqli_num_rows($resultF);
                 ?>
                 out of 1 )</h2>
-            <table class = 'content-table' style="background-color: aliceblue;font-family:'myFirstFont';">
+            <table class = 'content-table' style="background-color: aliceblue;font-family:'myFirstFont';margin-left: -400px;margin-right: -400px;">
                 <thead class= 'class="p-3 mb-2 bg-dark text-white'>
                     <tr>
-                        <th >Player ID</th>
+                    <th >Player ID</th>
                         <th >Name</th>  
                         <th>Position</th>
                         <th >Country</th>
-                        <th>Points</th>
-                        <th>Ranking</th>
+                        <th>Goal Points</th>
+                        <th>Assist Points</th>
+                        <th>Cleansheet Points Points</th>
                                                                         
                         <th>Select</th>
                     </tr>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,7 +70,7 @@
         
         
     </style>
-    <body style="background-color:powderblue;">
+    <body style="height:130%">
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -105,7 +106,7 @@
                     $sql = "SELECT * FROM matches";
                     if($result = mysqli_query($conn, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table " style="margin=auto;">';
+                            echo '<table class="table " style="border-right-width=110px" >';
                                 echo "<thead>";
                                     echo "<tr>";
                                         
@@ -158,4 +159,3 @@
         </div>
     </div>
 </body>
-</html>

@@ -36,9 +36,9 @@
                         <th >Name</th>  
                         <th>Position</th>
                         <th >Country</th>
-                        <th>Points</th>
-                        <th>Ranking</th>
-                                                                           
+                        <th>Goal Points</th>
+                        <th>Assist Points</th>
+                        <th>Cleansheet Points Points</th>                                  
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -50,17 +50,18 @@
                     $result = $conn->query($sql11);
                     while ($row = $result->fetch_assoc()){
                         $id = $row['id'];
-                        $pos = $row['Position'];
-                        $value = $row['Points'];
+                        $pos = $row['position'];
+                        $value = $row['points'];
                         
                         echo '<tr>
-                                <td> &nbsp'.$row['id'].'</td>
-                                <td> &nbsp'.$row['Name'].'</td>
-                                <td> &nbsp'.$row['Position'].'</td>
-                                <td> &nbsp'.$row['Country'].'</td>
-                                <td> &nbsp'.$value.'</td>
-                                <td> &nbsp'.$value.'</td>
-                                                              
+                                <td>'.$row['id'].'</td>
+                                <td>'.$row['Name'].'</td>
+                                <td>'.$row['position'].'</td>
+                                <td>'.$row['Country'].'</td>
+                                <td>'.$row['goalp'].'</td>
+                                <td>'.$row['assistp'].'</td>
+                                <td>'.$row['cleanP'].'</td>
+                                                      
                             
                                 <td>         
                                     <button class="btn btn-danger " name = "button1" style="background-color:#d10c0c;">

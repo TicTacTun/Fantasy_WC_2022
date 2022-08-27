@@ -132,6 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <meta charset="UTF-8">
     <title>Insert Player</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="matches.css">
     <style>
         .wrapper{
             width: 600px;
@@ -140,56 +141,56 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
     </style>
 </head>
-<body style="background-color:powderblue;">
+<body style="background-image:url(8.png);">
 <body>
     <div class="wrapper">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mt-5">Insert New Player</h2>
-                    <p>Please fill this form and submit to add players info to the database.</p>
+                    <h2 style="color:aliceblue;" class="mt-5">Insert New Player</h2>
+                    <p style="color:aliceblue;">Please fill this form and submit to add players info to the database.</p>
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                        
                         
 
                         <div class="form-group">
-                            <label>Player ID</label>
+                            <label style="color:aliceblue;">Player ID</label>
                             <input type="text" name="id" class="form-control <?php echo (!empty($id_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $id; ?>">
                             <span class="invalid-feedback"><?php echo $id_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Name</label>
+                            <label style="color:aliceblue;">Name</label>
                             <input type="text" name="Name" class="form-control <?php echo (!empty($name_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $name; ?>">
                             <span class="invalid-feedback"><?php echo $name_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Age</label>
+                            <label style="color:aliceblue;">Age</label>
                             <input type="text" name="age" class="form-control <?php echo (!empty($age_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $age; ?>">
                             <span class="invalid-feedback"><?php echo $age_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Position</label>
+                            <label style="color:aliceblue;">Position</label>
                             <input type="text" name="Position" class="form-control <?php echo (!empty($position_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $position; ?>">
                             <span class="invalid-feedback"><?php echo $position_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Apps</label>
+                            <label style="color:aliceblue;">Apps</label>
                             <input type="text" name="apps" class="form-control <?php echo (!empty($apps_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $apps; ?>">
                             <span class="invalid-feedback"><?php echo $apps_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Goals</label>
+                            <label style="color:aliceblue;">Goals</label>
                             <input type="text" name="goals" class="form-control <?php echo (!empty($goals_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $goals; ?>">
                             <span class="invalid-feedback"><?php echo $goals_err;?></span>
                         </div>
 
                         <div class="form-group">
-                            <label>Country</label>
+                            <label style="color:aliceblue;" >Country</label>
                             <input type="text" name="Country" class="form-control <?php echo (!empty($country_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $country; ?>">
                             <span class="invalid-feedback"><?php echo $country_err;?></span>
                         </div>

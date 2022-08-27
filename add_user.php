@@ -14,7 +14,7 @@ session_start();
 
     <title>Add User</title>
 </head>
-<body>
+<body style="background-image: url(8.png);">
   
     <div class="container mt-5">
 
