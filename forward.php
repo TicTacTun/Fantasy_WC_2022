@@ -13,9 +13,7 @@
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'.$row['goalp'].'</td>
-                    <td>'.$row['assistp'].'</td>
-                    <td>'.$row['cleanp'].'</td>
+                    
                     
                                                                   
                     <td>                      
@@ -38,7 +36,7 @@
         $resultF = mysqli_query($conn,$sqlF);
 
         if (( mysqli_num_rows($resultF)<2)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,id,GoalP,AssistP,CleanP,Points) SELECT Name, Position,Country,id,goalp,assistp,cleanp,Points FROM `players` where id =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
             try{
 
                 $result = mysqli_query($conn,$sql);
@@ -66,7 +64,7 @@
             echo'<script>
                     setTimeout(function() {
                         swal({
-                            title: "All 3 out of 3 Member has been added",
+                            title: "All 2 out of 2 Member has been added",
                             text :" You cant add more member! ",
                             type: "success",
                         }, function() {
@@ -118,9 +116,7 @@
                         <th>Name</th>
                         <th>Position</th>
                         <th>Country</th>
-                        <th>Goal Points</th>
-                        <th>Assist Points</th>
-                        <th>Cleansheet Points </th>
+                        
                         
                         
                         

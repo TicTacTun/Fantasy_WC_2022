@@ -14,9 +14,9 @@
 }
 
 body{
-    height: 200%;
+    height: 100%;
     background-image: url(10.jpg);
-    background-size: cover;
+    background-size: fill;
     background-repeat: no-repeat;
     background-position: center;
 }

@@ -11,13 +11,13 @@ if (!empty($_POST['name']) && $_POST["submit"]){
     $sql1 = "UPDATE `users` SET `status`='submitted'";
     $result1 = mysqli_query($conn,$sql1);
     
-    $sql = "CREATE TABLE `$team_name` ( Country VARCHAR(30) ,id VARCHAR(30) UNIQUE KEY,goalp int(30) , assistp int(30) , cleanP int(30) ,points INT(100) , Name VARCHAR(30) , position VARCHAR(50))";
+    $sql = "CREATE TABLE `$team_name` ( Country VARCHAR(30) ,id VARCHAR(30) UNIQUE KEY, Name VARCHAR(30) , position VARCHAR(50))";
     
     
     $result = mysqli_query($conn,$sql);
     
     $email = $_SESSION['email-log'];
-    $conTable ="INSERT INTO `user-table-conn`(`email`, `Contab`) VALUES ('$email','$team_name')";
+    $conTable ="INSERT INTO `userconn`(`email`, `Contab`) VALUES ('$email','$team_name')";
     $conTable_result = mysqli_query($conn,$conTable);
 
     if ($result){

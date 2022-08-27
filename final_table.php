@@ -28,7 +28,7 @@
         
         <div class="column4" >
             <h2 style='font-family:"myFirstFont", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'> Fantasy Team : <?php $email = $_SESSION['email-log'];
-                    $query = "SELECT `Contab` FROM `user-table-conn` WHERE `email`='$email';";                   
+                    $query = "SELECT `Contab` FROM `userconn` WHERE `email`='$email';";                   
                     $conttable = mysqli_query($conn,$query);
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];}
@@ -51,7 +51,7 @@
                     
                     
                 
-                    $query = "SELECT* FROM `user-table-conn` WHERE `email`='$email';";                   
+                    $query = "SELECT* FROM `userconn` WHERE `email`='$email';";                   
                     $conttable = mysqli_query($conn,$query);
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];

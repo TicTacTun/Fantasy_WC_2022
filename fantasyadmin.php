@@ -43,7 +43,7 @@
                         <tbody>
                             <?php 
                                 require_once "config.php";
-                                $sql = "SELECT * FROM `user-table-conn`;";
+                                $sql = "SELECT * FROM `userconn`;";
                                 $result = mysqli_query($conn,$sql);
                                 if ($result){
                                     while($row = $result->fetch_assoc()) {
@@ -71,7 +71,7 @@
                                     $email1 = $_GET['email'];
                                     $table1 = $_GET['Contab'];
                                     
-                                    $sql = "DELETE FROM `user-table-conn` WHERE email='$email1'; ";
+                                    $sql = "DELETE FROM `userconn` WHERE email='$email1'; ";
                                     $result = mysqli_query($conn,$sql);
 
                                     $sql2 = "DROP TABLE `$table1`";

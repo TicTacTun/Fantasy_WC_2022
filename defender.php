@@ -12,9 +12,7 @@
                     <td>'.$row['Name'].'</td>
                     <td>'.$row['Position'].'</td>
                     <td>'.$row['Country'].'</td>
-                    <td>'.$row['goalp'].'</td>
-                    <td>'.$row['assistp'].'</td>
-                    <td>'.$row['cleanp'].'</td>
+                    
                                                                      
                     <td>                        
                         <button class="btn btn-success btn-sm" name = "button0">
@@ -35,7 +33,7 @@
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<=3)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,id,GoalP,AssistP,CleanP,Points) SELECT Name, Position,Country,id,goalp,assistp,cleanp,Points FROM `players` where id =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
             try{
 
                 $result = mysqli_query($conn,$sql);
@@ -120,9 +118,7 @@
                         <th >Name</th>  
                         <th>Position</th>
                         <th >Country</th>
-                        <th>Goal Points</th>
-                        <th>Assist Points</th>
-                        <th>Cleansheet Points Points</th>
+                        
                         
                         
                                                                            

@@ -6,12 +6,12 @@
 
 <html>
     <head>
-        <title></title>   
+        <title>Fixture</title>
         <link rel="stylesheet" href="matches.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     </head>
     
-    <body>
+    <body >
         <div class="container" style="font-family:'myFirstFont';">
             <h1>Fixtures of Qatar World Cup 2022 </h1>
             <table class="table table strip">
@@ -64,7 +64,7 @@
                 </tbody>
             </table> 
             
-            <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; color:white; font: weight 80%; margin-left:5%; margin-bottom:3%; background-color:#500808;">
+            <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; color:white; font: weight 80%; margin-left:15%; margin-bottom:-10%; background-color:#500808;">
             Home
         </button>                   
         </div>

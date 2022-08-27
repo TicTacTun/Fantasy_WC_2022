@@ -36,9 +36,7 @@
                         <th >Name</th>  
                         <th>Position</th>
                         <th >Country</th>
-                        <th>Goal Points</th>
-                        <th>Assist Points</th>
-                        <th>Cleansheet Points Points</th>                                  
+                                                        
                         <th>Select</th>
                     </tr>
                 </thead>
@@ -58,9 +56,7 @@
                                 <td>'.$row['Name'].'</td>
                                 <td>'.$row['position'].'</td>
                                 <td>'.$row['Country'].'</td>
-                                <td>'.$row['goalp'].'</td>
-                                <td>'.$row['assistp'].'</td>
-                                <td>'.$row['cleanP'].'</td>
+                                
                                                       
                             
                                 <td>         
