@@ -1,6 +1,7 @@
 <?php
 // Include config file
 require_once "config.php";
+
  
 // Define variables and initialize with empty values
 $country = $id = $position = $name = $age = $apps = $goals = "";
@@ -133,7 +134,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <title>Insert Player</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="matches.css">
-    <link rel="stylesheet" type="text/css" href="styleadminhome.css">
     <style>
         .wrapper{
             width: 600px;
