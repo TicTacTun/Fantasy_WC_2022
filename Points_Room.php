@@ -91,6 +91,7 @@
                                         echo "<th>Goal Points</th>";
                                         echo "<th>Assist Points</th>";
                                         echo "<th>Clean Sheet Points</th>";
+
                                         echo "<th>Total Points</th>";
                                         echo "<th>Action</th>";
                                     echo "</tr>";
@@ -107,7 +108,8 @@
                                         echo "<td>" . $row['goalp'] . "</td>";
                                         echo "<td>" . $row['assistp'] . "</td>";
                                         echo "<td>" . $row['cleanp'] . "</td>";
-                                        echo "<td>" . $row['points'] . "</td>";
+                                        $sum = $row['goalp']+$row['assistp'] +$row['cleanp'] ;
+                                        echo "<td>" . $sum . "</td>";
 
                                         echo "<td>";
                                             echo "&nbsp&nbsp;";

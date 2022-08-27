@@ -42,7 +42,9 @@
                         <th >Country</th>
                         <th>Goal Points</th>
                         <th>Assist Points</th>
-                        <th>Cleansheet Points Points</th>  
+                        
+                        <th>Cleansheet Points Points</th> 
+                        <th>Total Points</th> 
                                                                            
                     </tr>
                 </thead>
@@ -73,6 +75,7 @@
                                 <td>'.$row['goalp'].'</td>
                                 <td>'.$row['assistp'].'</td>
                                 <td>'.$row['cleanp'].'</td>
+                                <td>'.$value.'</td>
                                                                 
                                 
                                     

@@ -20,7 +20,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     
 
 
-    $input_points = trim($_POST["points"]);
+    /*$input_points = trim($_POST["points"]);
     if(empty($input_points)){
         $points_err = "Please enter goal numbers.";     
     }
@@ -29,10 +29,10 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
     }
     else{
         $points = $input_points;
-    }
+    }*/
     
     // Check input errors before inserting in database
-    if(empty($goalp_err) && empty($assistp_err) && empty($cleanp_err) && empty($points_err)){
+    if(empty($goalp_err) && empty($assistp_err) && empty($cleanp_err) ){  //empty($points_err)
         // Prepare an update statement
         $sql = "UPDATE players SET goalp=?, assistp=?, cleanp=?,points=? WHERE id=?";
          
@@ -94,7 +94,7 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $assistp = $row["assistp"];
                     $cleanp = $row["cleanp"];
                     
-                    $points = $row["points"];
+                    $points = $row["goalp"]+ $row["assistp"]+$row["cleanp"];//$row["points"];
                     
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
@@ -160,11 +160,11 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                             <span class="invalid-feedback"><?php echo $cleanp_err;?></span>
                         </div>
 
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label>Points</label>
                             <input type="text" name="points" class="form-control <?php echo (!empty($points_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $points; ?>">
                             <span class="invalid-feedback"><?php echo $points_err;?></span>
-                        </div>
+                        </div> -->
                         
 
                         <input type="hidden" name="id" value="<?php echo $id; ?>"/>
