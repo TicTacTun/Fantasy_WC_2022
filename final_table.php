@@ -61,7 +61,7 @@
                         while ($row = $result->fetch_assoc()){
                             $id = $row['id'];
                             $pos = $row['Position'];
-                            $value = 0;
+                            $value = $row['Points'];
                             
                             echo '<tr>
                                     <td>'.$row['id'].'</td>

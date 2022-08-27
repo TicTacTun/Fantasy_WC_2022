@@ -17,12 +17,27 @@
             width: 120px;
         }
         table { background-color:aliceblue; }
+        @font-face {
+        font-family: 'myFirstFont';
+        src: url(Qatar2022Arabic-Bold.ttf);
+        }
+        *{
+        margin: 0;
+        padding: 0;
+        font-family:'myFirstFont';
+        }
+        body {
+        background-image: url("8.png");
+        background-repeat: no-repeat, repeat;
         
-        
+        height: cover;
+        background-size: cover;
+        background-position: center;
+        }
         
         
     </style>
-    <body style="background-color:bisque;">
+    <body >
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -36,7 +51,7 @@
                 
                 <div class="col-md-12">
                     <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left">Players Point Room</h2>
+                        <h2 class="pull-left" style="color: white;">Players Point Room</h2>
                         
                     </div>
                     <?php

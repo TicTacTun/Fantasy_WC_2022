@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Control Player</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="matches.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
-        @font-face {
-        font-family: myFirstFont;
-        src: url(Qatar2022Arabic-Bold.ttf);
-        }
         .wrapper{
             width: 1000px;
             margin: 0 auto;
@@ -20,13 +17,17 @@
         table tr td:last-child{
             width: 120px;
         }
-        table { background-color: aliceblue; }
+        table { background-color: aliceblue;
+        
+        
+        }
+        
         body{
+        background-image: url(8.png);
         font-family:'myFirstFont';
         background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
-
-        height: cover;
-        background-size: cover;
+        height: 100%;
+        background-size: fill;
         background-position: center;
 
         }
@@ -63,12 +64,12 @@
         
 
         }
-                
+        
         
         
         
     </style>
-    <body >
+    <body style="background-color:powderblue;">
     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();   
@@ -86,55 +87,56 @@
                             <li ><a href="adminhome.php">Admin Home</a></li>
                             <li><a href="usertest.php">Users</a></li>
                             <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
-                            <li class="active"><a href="control_player.php">Players</a></li>
-                            <li><a href="admin_fixture.php">Fixture</a></li>
+                            <li><a href="control_player.php">Players</a></li>
+                            <li class="active"><a href="admin_fixture.php">Fixture</a></li>
                             <li><a href="Points_Room.php">Points</a></li>
                         </ul>
                     </div>
-                    <div class="mt-5 mb-3 clearfix" style="margin-top:7% ;">
-                        <h2 class="pull-left" style="color:#fff; margin-top:5%;" >Players Info</h2>
-                        <a href="insert_player.php" class="btn btn-success pull-right" style="margin-top:7%;" ><i class="fa fa-plus"></i> Add New Player</a>
+                    <div class="mt-5 mb-3 clearfix" style="margin-top: 15%;">
+                        <h2 class="pull-center" style="color:#fff; margin-top:13%;">Fixtures of Qatar World Cup 2022</h2>
+                        <br>
+                        <a href="adding_fixture.php" class="btn btn-success pull-right" style="margin-top:3%; color:#fff;"><i class="fa fa-plus"></i> Add New Matches</a>
                     </div>
                     <?php
                     // Include config file
                     require_once "config.php";
                     
                     // Attempt select query execution
-                    $sql = "SELECT * FROM players";
+                    $sql = "SELECT * FROM matches";
                     if($result = mysqli_query($conn, $sql)){
                         if(mysqli_num_rows($result) > 0){
-                            echo '<table class="table table-bordered table-striped">';
+                            echo '<table class="table " style="margin=auto;">';
                                 echo "<thead>";
                                     echo "<tr>";
                                         
-                                        echo "<th>ID</th>";
-                                        echo "<th>Name</th>";
-                                        echo "<th>Age</th>";
-                                        echo "<th>Position</th>";
-                                        echo "<th>Apps</th>";
-                                        echo "<th>Goals</th>";
-                                        echo "<th>Country</th>";
-                                        echo "<th>Action</th>";
+                                        echo "<th>Match no.</th>";
+                                        echo "<th>Home</th>";
+                                        echo "<th></th>";
+                                        echo "<th>Away</th>";
+                                        echo "<th>Date</th>";
+                                        echo "<th>Kick-Off</th>";
+                                        echo "<th>Stadium</th>";
+                                      
+                                        
+
                                     echo "</tr>";
                                 echo "</thead>";
                                 echo "<tbody>";
                                 while($row = mysqli_fetch_array($result)){
                                     echo "<tr>";
-                                        echo "<td>" . $row['id'] . "</td>";
-                                        echo "<td>" . $row['Name'] . "</td>";
-                                        echo "<td>" . $row['age'] . "</td>";
-                                        echo "<td>" . $row['Position'] . "</td>";
-                                        echo "<td>" . $row['apps'] . "</td>";
-                                        echo "<td>" . $row['goals'] . "</td>";
-                                        echo "<td>" . $row['Country'] . "</td>";
+                                        echo "<td>" . $row['match'] . "</td>";
+                                        echo "<td>" . $row['Home'] . "</td>";
+                                        echo "<td>" . $row['faces'] . "</td>";
+                                        echo "<td>" . $row['Away'] . "</td>";
+                                        echo "<td>" . $row['dates'] . "</td>";
+                                        echo "<td>" . $row['Kick'] . "</td>";
+                                        echo "<td>" . $row['Stadium'] . "</td>";
+                                       
+                                       
 
 
-                                        echo "<td>";
-                                            echo "&nbsp&nbsp;";
-                                            echo '<a href="update_player.php?id='. $row['id'] .'" class="mr-3" title="Update Player" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
-                                            echo "&nbsp&nbsp&nbsp&nbsp;";
-                                            echo '<a href="delete_player.php?id='. $row['id'] .'" title="Delete Player" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
-                                        echo "</td>";
+
+                                       
                                     echo "</tr>";
                                 }
                                 echo "</tbody>";                            

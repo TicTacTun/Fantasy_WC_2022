@@ -13,9 +13,7 @@
             <ul>
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="Players_Info.php">Players</a></li>
-                <li><a href="#">Teams</a></li>
-                <li><a href="#">Fixtures</a></li>
-                <li><a href="#">Leaderboard</a></li>
+                <li><a href="match.php">Fixtures</a></li>
                 <li><a href="logout.php">Log Out</a></li>
             </ul>
         </div>
@@ -45,7 +43,6 @@
             ?>
             
                         
-            <a href="#" class="btn">Prediction</a>
         </div>
     </header>
 </body>

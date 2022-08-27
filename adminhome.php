@@ -19,7 +19,9 @@
                 <li><a href="usertest.php">Users</a></li>
                 <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
                 <li><a href="control_player.php">Players</a></li>
-                <li><a href="#">Points</a></li>
+                <li><a href="admin_fixture.php">Fixture</a></li>
+                <li><a href="Points_Room.php">Points</a></li>
+                
             </ul>
         </div>
         <div class="title">
