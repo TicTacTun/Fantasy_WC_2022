@@ -95,7 +95,9 @@ if(isset($_POST["id"]) && !empty($_POST["id"])){
                     $cleanp = $row["cleanp"];
                     
                     $points = $row["goalp"]+ $row["assistp"]+$row["cleanp"];//$row["points"];
-                    
+                    /*$sqlup  = "UPDATE `players` SET points  = $points where id =$param_id "; 
+                    mysqli_query($conn,$sqlup) ;
+                    */
                 } else{
                     // URL doesn't contain valid id. Redirect to error page
                     header("location: error_player.php");

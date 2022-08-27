@@ -108,8 +108,12 @@
                                         echo "<td>" . $row['goalp'] . "</td>";
                                         echo "<td>" . $row['assistp'] . "</td>";
                                         echo "<td>" . $row['cleanp'] . "</td>";
-                                        $sum = $row['goalp']+$row['assistp'] +$row['cleanp'] ;
-                                        echo "<td>" . $sum . "</td>";
+                                        $id  = $row['id'];
+                                        
+                                        $sum = $row['assistp']+ $row['goalp'] +$row['cleanp'];
+                                        $sqlup  = "UPDATE `players` SET  points = $sum where id =$id "; 
+                                        $result1 = mysqli_query($conn,$sqlup);
+                                        echo "<td>" .$sum . "</td>";
 
                                         echo "<td>";
                                             echo "&nbsp&nbsp;";
