@@ -8,6 +8,7 @@
     <head>
         <title></title>   
         <link rel="stylesheet" href="matches.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     
     <body>
@@ -62,7 +63,10 @@
                         ?>
                     </tbody>
                 </table>    
-                          
+                 
+                <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; font: weight 80%; background-color:#500808;">
+            Home
+        </button>
         </div>
          
     </body>

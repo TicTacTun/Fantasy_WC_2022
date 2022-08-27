@@ -15,7 +15,7 @@
 
 body{
     height: 100vh;
-    
+    background-image: url(10.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -28,7 +28,7 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
-    background-color:hsl(340, 1%, 45%);
+    background-color:hsl(0, 0%, 100%);
     text-align: center;
     border-radius: 4px;
     text-transform: uppercase;
