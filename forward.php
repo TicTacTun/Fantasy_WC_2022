@@ -37,7 +37,7 @@
         
         $resultF = mysqli_query($conn,$sqlF);
 
-        if (( mysqli_num_rows($resultF)<3)) {
+        if (( mysqli_num_rows($resultF)<2)) {
             $sql = "INSERT INTO  `$name` (Name, Position,Country,id,GoalP,AssistP,CleanP,Points) SELECT Name, Position,Country,id,goalp,assistp,cleanp,Points FROM `players` where id =$id;";
             try{
 
@@ -110,7 +110,7 @@
 
                     
                 ?>
-            out of 3 )</h2>                
+            out of 2 )</h2>                
             <table class = 'content-table' style = 'background-color: aliceblue;font-family:"myFirstFont";margin-left: -400px;margin-right: -400px;'>
                 <thead class = 'p-3 mb-2 bg-dark text-white'>
                     <tr>

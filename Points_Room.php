@@ -5,6 +5,8 @@
     <title>Points Room</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="styleadminhome.css">
+    <link rel="stylesheet" href="matches.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -50,8 +52,22 @@
             <div class="row" >
                 
                 <div class="col-md-12">
-                    <div class="mt-5 mb-3 clearfix">
-                        <h2 class="pull-left" style="color: white;">Players Point Room</h2>
+                    
+                    <div class="main">    
+                        <ul>
+                            <li ><a href="adminhome.php">Admin Home</a></li>
+                            <li><a href="usertest.php">Users</a></li>
+                            <li><a href="fantasyadmin.php">Fantasy Teams</a></li>
+                            <li><a href="control_player.php">Players</a></li>
+                            <li><a href="admin_fixture.php">Fixture</a></li>
+                            <li class="active"><a href="Points_Room.php">Points</a></li>
+                            
+                        </ul>
+                    
+                    </div>
+                    
+                    <div class="mt-5 mb-3 clearfix" >
+                        <h2 class="pull-left" style="color: white;margin-top :120px;">Players Point Room</h2>
                         
                     </div>
                     <?php
