@@ -64,7 +64,7 @@
                 </tbody>
             </table> 
             
-            <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; color:white; font: weight 80%; margin-left:15%; margin-bottom:-10%; background-color:#500808;">
+            <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; color:white; font: weight 80%; margin-left:-2%; margin-bottom:-10%; background-color:#500808;">
             Home
         </button>                   
         </div>

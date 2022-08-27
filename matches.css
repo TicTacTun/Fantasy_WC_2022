@@ -18,7 +18,7 @@ body{
     background-image: url(10.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: fill;
 }
 
 .container{
