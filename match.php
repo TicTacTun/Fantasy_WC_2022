@@ -14,7 +14,7 @@
         <div class="container" style="font-family:'myFirstFont';">
             <h1>Fixtures of Qatar World Cup 2022 </h1>
             <table class="table">
-                <thead>
+              
                     <tr>
                      
                         <th>Match no.</th>
@@ -24,7 +24,7 @@
                         <th>Date</th>
                         <th>Kick-Off</th>
                         <th>Stadium</th>
-                        <th>Group</th>
+                     
                         
                         
                     </tr>
@@ -45,14 +45,14 @@
                         // read data of each row
                         while($row = $result->fetch_assoc()) {
                             echo "<tr>
-                                <td>" . $row["Match no."] .    "</td>
-                                <td>" .$row["Home Team"] .   "</td>
-                                <td>" .$row["facing h2h"] .   "</td>
-                                <td>" .$row["Away Team"] .   "</td>
-                                <td>" . $row["Date"] .    "</td>
-                                <td>" . $row["Kick-Off"] .   "</td>
+                                <td>" . $row["match"] .    "</td>
+                                <td>" .$row["Home"] .   "</td>
+                                <td>" .$row["faces"] .   "</td>
+                                <td>" .$row["Away"] .   "</td>
+                                <td>" . $row["dates"] .    "</td>
+                                <td>" . $row["Kick"] .   "</td>
                                 <td>" . $row["Stadium"]   . "</td>
-                                <td>" . $row["Group"]   . "</td>
+                                
                                 
                                 
                             </tr>";
