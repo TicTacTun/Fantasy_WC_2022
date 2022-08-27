@@ -38,7 +38,7 @@
         
         $resultF = mysqli_query($conn,$sqlF);
         if ((mysqli_num_rows($resultF)<1)) {
-            $sql = "INSERT INTO  `$name` (Name, Position,Country,id) SELECT Name, Position,Country,id FROM `players` where id =$id;";
+            $sql = "INSERT INTO  `$name` (Name, Position,Country,id,points) SELECT Name, Position,Country,id,points FROM `players` where id =$id;";
             try{
 
                 $result = mysqli_query($conn,$sql);
