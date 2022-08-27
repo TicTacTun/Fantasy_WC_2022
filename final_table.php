@@ -15,6 +15,8 @@
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     
     <title> Fantasy Team Selection</title>
 </head>
@@ -24,8 +26,30 @@
     <div class='bg' style="height: 150%;">
         <div>
             <header>Here is Your Fantasy Team</header> 
-        </div> 
-        
+        </div>
+    
+        <h2 style='font-family:"myFirstFont", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'> Your Total Points : 
+                    
+            
+            
+                        <?php
+                            $email = $_SESSION['email-log'];
+                            $query = "SELECT `Contab` FROM `userconn` WHERE `email`='$email';";                   
+                            $conttable = mysqli_query($conn,$query);
+                            while ($row = $conttable->fetch_assoc()){
+                                $table_name = $row['Contab'];
+                                $sqlsum = "SELECT $table_name.id, SUM(players.points)  as total FROM $table_name INNER JOIN players ON $table_name.id = players.id;";
+                                $total_result = mysqli_query($conn,$sqlsum);
+                                while ($row = $total_result->fetch_assoc()){
+                                    $sad = $row["total"];
+                                    echo $sad ;
+                                }
+                            }
+
+                        
+                        ?>
+                    
+        </h2>
         <div class="column4" >
             <h2 style='font-family:"myFirstFont", Times, serif; background-color:#500808; font-weight: 200px;margin-bottom:1.9%;width:50%; margin-left:27%;'> Fantasy Team : <?php $email = $_SESSION['email-log'];
                     $query = "SELECT `Contab` FROM `userconn` WHERE `email`='$email';";                   
@@ -33,7 +57,7 @@
                     while ($row = $conttable->fetch_assoc()){
                         $table_name = $row['Contab'];}
                         echo $table_name;?>  </h2>
-            <table id = 'team 'class = 'table table-striped' style="font-family:'myFirstFont';">
+            <table id = 'team 'class = 'table table-striped' style="font-family:'myFirstFont'; ">
                 <thead class= 'p-3 mb-2 bg-dark text-white'>
                     <tr>
                         <th >Player ID</th>
@@ -43,7 +67,7 @@
                         <th>Goal Points</th>
                         <th>Assist Points</th>
                         
-                        <th>Cleansheet Points Points</th> 
+                        <th>Cleansheet Points </th> 
                         <th>Total Points</th> 
                                                                            
                     </tr>
@@ -96,28 +120,7 @@
     </div> 
 
 </body>
-<body>
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <div class="card">
-        <div class="card-header bg">
-            <h1>Calculate Points</h1>
-        </div>
-        <div class="card-body">
-          
-        
-            <?php
-            $results1 = mysqli_query($conn, "SELECT sum(points) FROM `$table_name`")or die(mysqli_error($conn));
-            while($rows = mysqli_fetch_array($results1)){?>
-            Total Points: <?php echo $rows['sum(points)']; ?>
-            <?php
-            }
-            ?>
-        </div>
-      </div>
-    </div>
-  </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-</body>
+
+
+
 </html>
