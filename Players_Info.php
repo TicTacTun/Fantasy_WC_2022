@@ -199,8 +199,12 @@
                     mysqli_close($conn);
                     ?>
                 </div>
-            </div>        
+            </div>  
+            <button class="btn btn-success btn-lg" onclick="location.href='home.php'" type="button" style="width: 12% ; font-weight:bold;font-family:'myFirstFont'; color:brown; font: weight 80%; margin-left:45%; margin-bottom:5%; background-color:#fff;">
+            Home
+        </button>      
         </div>
     </div>
+    
 </body>
 </html>
