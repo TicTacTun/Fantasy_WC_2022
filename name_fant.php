@@ -11,7 +11,7 @@ if (!empty($_POST['name']) && $_POST["submit"]){
     $sql1 = "UPDATE `users` SET `status`='submitted'";
     $result1 = mysqli_query($conn,$sql1);
     
-    $sql = "CREATE TABLE `$team_name` ( Country VARCHAR(30) ,id VARCHAR(30) UNIQUE KEY, Points INT(6) ,Ranking int(10) , Name VARCHAR(30) , Position VARCHAR(50))";
+    $sql = "CREATE TABLE `$team_name` ( Country VARCHAR(30) ,id VARCHAR(30) UNIQUE KEY,GoalP int(30) , AssistP int(30) , CleanP int(30) ,Points INT(100) , Name VARCHAR(30) , Position VARCHAR(50))";
     
     
     $result = mysqli_query($conn,$sql);
