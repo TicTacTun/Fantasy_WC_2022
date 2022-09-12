@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Fantasy WC 2022 Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="styleadminhome.css">
+    <link rel="stylesheet" type="text/css" href="css/styleadminhome.css">
 </head>
 <body>
     <header>

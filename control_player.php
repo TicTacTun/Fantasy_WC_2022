@@ -23,7 +23,7 @@
         table { background-color: aliceblue; }
         body{
         font-family:'myFirstFont';
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(bg/8.png);
 
         height: cover;
         background-size: cover;

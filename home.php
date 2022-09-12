@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Fantasy WC 2022</title>
-    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style1.css">
 </head>
 <body>
     <header>

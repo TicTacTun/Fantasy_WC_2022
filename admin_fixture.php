@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Fixture</title>
-    <link rel="stylesheet" href="matches.css">
+    <link rel="stylesheet" href="css/matches.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     
@@ -28,7 +28,7 @@
         body{
         background-image: url(8.png);
         font-family:'myFirstFont';
-        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(8.png);
+        background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(bg/8.png);
         height: 100%;
         background-size: fill;
         background-position: center;

@@ -12,7 +12,7 @@
     <title>Players Information</title>
     <style>
     body {
-        background-image: url("10.jpg");
+        background-image: url("bg/10.jpg");
         background-repeat: no-repeat, repeat;
         
         height: cover;
